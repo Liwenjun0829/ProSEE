@@ -1,0 +1,39 @@
+{
+  "evaluation": "validation",
+  "objective_order": [
+    "validation_mean_r2",
+    "validation_r2_std",
+    "complexity"
+  ],
+  "directions": {
+    "validation_mean_r2": "maximize",
+    "validation_r2_std": "minimize",
+    "complexity": "minimize"
+  },
+  "empirical_bounds": {
+    "validation_mean_r2": {
+      "min": 0.7102614289348548,
+      "max": 0.7935967623108446
+    },
+    "validation_r2_std": {
+      "min": 0.03838755722057324,
+      "max": 0.1363320055014549
+    },
+    "complexity": {
+      "min": 12.0,
+      "max": 34.0
+    }
+  },
+  "raw_reference": {
+    "validation_mean_r2": 0.7102614289348548,
+    "validation_r2_std": 0.1363320055014549,
+    "complexity": 34.0
+  },
+  "normalized_reference": {
+    "validation_mean_r2": 0.0,
+    "validation_r2_std": 0.0,
+    "complexity": 0.0
+  },
+  "zero_span_objectives": [],
+  "normalization_scope": "mode4_experiment_all_iterations_all_seeds_tree_and_random_methods"
+}

@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "reason": "disabled",
+  "data_mode": "realdata_mat",
+  "metadata_json": "/home/lwj/ProSEE/src/prosee/symbolic/core/artifacts/expri2/mode5_experiment_001/seed_001/independent_segment_fitting/segment_1/pysr_baseline/pysr_baseline.json"
+}

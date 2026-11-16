@@ -1,0 +1,4 @@
+﻿evaluation,objective,direction,empirical_lower_bound,empirical_upper_bound,raw_reference,normalized_reference,zero_span_dimension_excluded,normalization_scope
+comparison,mean_r2,maximize,0.0,1.0,0.0,0.0,False,all_iterations_tree_and_random_pareto_fronts
+comparison,r2_std,minimize,0.0,1.0,1.0,0.0,False,all_iterations_tree_and_random_pareto_fronts
+comparison,complexity,minimize,0.0,1.0,1.0,0.0,False,all_iterations_tree_and_random_pareto_fronts

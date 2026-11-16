@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "source_root": "/home/lwj/正式代码/另一种NN模型",
+  "core_destination": "src/prosee/symbolic/core",
+  "files": {
+    "formula_structure_features.py": "8c88000f1fcf12109673a5acaa2939d96d568512c710b48f33a83bcca3120821",
+    "structure_r2_ranker.py": "04d0be64826dd325152f597e10d787494e015cb03b5f6b8bb845d0bfa7f9d49d",
+    "data_io.py": "a169a4e201ba22ad0f4930aaf937a94f9e3969ddb7764b7077e648169a67f95b",
+    "structure_screen/__init__.py": "1feee72e9892cba8758326688fbceea2bfd2c487ee4014eb720e67bda85c4ebc",
+    "structure_screen/bounded_model.py": "362d4dcb3c7a210a4fd64ec0ceaecab584e791ac4260ea682fe08b4353701639",
+    "structure_screen/cli.py": "038370800c439f47716d228eeb7702137bb5981685aada06b59eb1a24e72a599",
+    "structure_screen/dimensional_gp.py": "35ab14ebefe29f20e3728e5af9be5c3bdb5c6c7cac0524f98d7489838abd862a",
+    "structure_screen/encoding.py": "2feecf178acb4cd1d580dc4da5c6f5f2c34177c50a8b9b1b69402db4e123162a",
+    "structure_screen/expanded_data.py": "756771c7191678901939790d413f4f5b007615bfe8b5c7545e2fc8d5cc33f29a",
+    "structure_screen/tree_search_ops.py": "a4ed56d1fd8f8534bb31036ec5879f94456df7ac0da978b14aa17f5cb4f16f9d",
+    "pareto_formula_evolution.py": "b7b9161a1f086f676d76963765bf28d025dbbab792102df99510d54d817c4bb3",
+    "structure_screen/legacy_gp_adapter.py": "52e69e02a6f1824c9dbadcbc1e98ba9d9695275c65775f549973d5c620467f3d",
+    "structure_screen/lm.py": "b3433c0af6b4b41a899d90eefc6a630add50fcfa2de0d6bd64f1de99fb1041f6",
+    "structure_screen/model.py": "5816d552b104e05cc912b4b486880083b20f488c17c47dc8268e65fa5dbe5409",
+    "structure_screen/train.py": "b0e7f5810ff51db19bd253985734046dbb44522b0b54a2b5d677645e84abc9f3",
+    "structure_screen/train_expanded.py": "1509b1a9c943e2f0cd63eb7672662762e2110717b72e2306fd37619fff05fdc0",
+    "canonicalize_repeated_structures.py": "c652eba2c6dc8dfa8b67b7e42a2411923294a0331bc5ee9d2556484df3c88c1c",
+    "formula_discovery_pipeline.py": "bac613bcbd0ebd99534452ce342f33a5b316849b9d00f9759096c21bcfb526ae",
+    "generate_zero_sum_bases.py": "2258fe78111c1b70b452cfa06fb0e26d4d82cbda128095bd0221a8a83873383e"
+  }
+}

@@ -1,0 +1,397 @@
+﻿sample_index,pool_index,formula_id,formula_family,structure_type,readable_expression,training_label,actual_fit_r2,used_by_validation_model,used_by_final_model
+0,12,candidate_000019,single,single_candidate,a0*(c1/(x1*x2) + c2*x1),62.278481012658226,0.843427161552084,True,True
+1,4,candidate_000214,single,single_candidate,a0*sin(c1*x1 + cconst_product_0),44.81012658227848,0.5886074902412822,True,True
+2,179,candidate_000070,single,single_candidate,a0*cos(c1/x1 + c2*x1*x2),3.2911392405063293,-668.7084696379964,False,True
+3,220,candidate_000145,single,single_candidate,a0*log(Abs(cos(c1*x2/x1 + c2/x2))),8.60759493670886,-200.04346776384588,False,True
+4,19,candidate_000208,single,single_candidate,a0*log(Abs(sin(c2*x2 + cconst_product_0))),22.78481012658228,-15.149905567230906,True,True
+5,149,candidate_000153,single,single_candidate,a0*log(Abs(cos(c1/(x1*x2) + c2/x2))),2.5316455696202533,-321.13677271656906,False,True
+6,80,candidate_000228,single,single_candidate,a0*sin(c1*x2 + c2/(x1*x2)),19.746835443037973,-0.1671545541570858,True,True
+7,101,candidate_000224,single,single_candidate,a0*sin(c1*x1/x2 + c2/(x1*x2)),0.5063291139240507,-662.1726381954742,True,True
+8,226,candidate_000061,single,single_candidate,a0*cos(c1*x2/x1 + c2/x1),66.58227848101266,0.8244321662401723,True,True
+9,165,candidate_000255,single,single_candidate,a0*sin(c2/x1 + cconst_product_0),49.87341772151899,0.6089780711136057,True,True
+10,233,candidate_000011,single,single_candidate,a0*(c1*x1/x2 + c2/x2),7.848101265822785,-115.85276635813774,True,True
+11,9,candidate_000223,single,single_candidate,a0*sin(c1*x1/x2 + c2*x2/x1),2.0253164556962027,-596.3924789295405,True,True
+12,208,candidate_000194,single,single_candidate,a0*log(Abs(sin(c1/(x1*x2) + c2*x2/x1))),28.354430379746834,0.8061494690004642,False,True
+13,197,candidate_000123,single,single_candidate,a0*log(Abs(c2/x2 + cconst_product_0)),88.60759493670886,0.8394250751268604,False,True
+14,196,candidate_000135,single,single_candidate,a0*log(Abs(cos(c1*x1/x2 + c2/x1))),5.063291139240507,-431.99890025933064,True,True
+15,38,candidate_000161,single,single_candidate,a0*log(Abs(cos(c1/x2 + c2*x1/x2))),4.556962025316456,-459.51643122505726,True,True
+16,221,candidate_000230,single,single_candidate,a0*sin(c1*x2),4.810126582278481,-674.8419916124701,True,True
+17,237,candidate_000040,single,single_candidate,a0*cos(c1*x1 + cconst_product_0),47.59493670886076,0.5881275792011706,True,True
+18,175,candidate_000236,single,single_candidate,a0*sin(c1*x2/x1 + c2/x2),19.49367088607595,-0.42314402915130445,True,True
+19,244,candidate_000240,single,single_candidate,a0*sin(c1/(x1*x2) + cconst_product_0),54.936708860759495,0.8397545038927947,True,True
+20,205,candidate_000205,single,single_candidate,a0*log(Abs(sin(c1/x2))),14.430379746835444,-0.10232418562974255,False,True
+21,177,candidate_000020,single,single_candidate,a0*(c1/(x1*x2) + c2/x1),68.60759493670886,0.8339938351714955,False,True
+22,1,candidate_000125,single,single_candidate,a0*log(Abs(cos(c1*x1 + c2*x1/x2))),2.7848101265822787,-456.30934878743534,True,True
+23,23,candidate_000052,single,single_candidate,a0*cos(c1*x2 + c2*x2/x1),12.405063291139241,-296.2456698618375,False,True
+24,93,candidate_000110,single,single_candidate,a0*log(Abs(c1/x1 + c2*x1/x2)),29.367088607594937,0.7274893202610899,False,True
+25,88,candidate_000179,single,single_candidate,a0*log(Abs(sin(c1*x1/x2 + c2/x1))),4.050632911392405,-589.7429879943091,True,True
+26,242,candidate_000047,single,single_candidate,a0*cos(c1*x1/x2 + c2*x2/x1),1.0126582278481013,-326.3701619098098,True,True
+27,245,candidate_000013,single,single_candidate,a0*(c1*x2 + c2*x1*x2),7.0886075949367084,-330.9074268826728,True,True
+28,35,candidate_000074,single,single_candidate,a0*cos(c1/x2 + c2/x1),62.53164556962025,0.824911645460102,True,True
+29,147,candidate_000092,single,single_candidate,a0*log(Abs(c1*x1/x2 + cconst_product_0)),30.126582278481013,0.8393533648550108,True,True
+30,127,candidate_000113,single,single_candidate,a0*log(Abs(c1/x2 + c2*x1)),85.0632911392405,0.8473044751769189,True,True
+31,137,candidate_000122,single,single_candidate,a0*log(Abs(c2/x1 + cconst_product_0)),35.69620253164557,-0.022021345518796975,True,True
+32,120,candidate_000220,single,single_candidate,a0*sin(c1*x1*x2),0.25316455696202533,-734.9289582626374,True,True
+33,160,candidate_000170,single,single_candidate,a0*log(Abs(sin(c1*x1 + c2*x2))),8.860759493670885,-319.3550564550041,True,True
+34,18,candidate_000169,single,single_candidate,a0*log(Abs(sin(c1*x1 + c2*x1/x2))),7.594936708860759,-446.56065538518794,True,True
+35,27,candidate_000180,single,single_candidate,a0*log(Abs(sin(c1*x1/x2 + c2/x2))),6.075949367088608,-444.1040972780141,True,True
+36,211,candidate_000084,single,single_candidate,a0*log(Abs(c1*x1*x2 + c2/x1)),36.70886075949367,-0.1094235978158613,False,True
+37,52,candidate_000149,single,single_candidate,a0*log(Abs(cos(c1/(x1*x2) + c2*x1/x2))),5.3164556962025316,-441.97897194860855,True,True
+38,128,candidate_000138,single,single_candidate,a0*log(Abs(cos(c1*x2 + c2*x1*x2))),7.341772151898734,-411.1429580279515,True,True
+39,70,candidate_000028,single,single_candidate,a0*c1*x1,35.949367088607595,0.014194430586168538,False,True
+40,8,candidate_000094,single,single_candidate,a0*log(Abs(c1*x2 + c2*x1)),46.58227848101266,0.48245656183392793,True,True
+41,124,candidate_000104,single,single_candidate,a0*log(Abs(c1/(x1*x2) + c2*x1)),40.25316455696203,0.1649549553245001,True,True
+42,59,candidate_000097,single,single_candidate,a0*log(Abs(c1*x2/x1 + c2*x1)),43.29113924050633,0.4708647307325796,True,True
+43,254,candidate_000080,single,single_candidate,a0*log(Abs(c1*x1 + c2*x1*x2)),46.835443037974684,0.4867685898450168,False,True
+44,225,candidate_000087,single,single_candidate,a0*log(Abs(c1*x1/x2 + c2*x1)),87.59493670886076,0.7729318599119264,True,True
+45,253,candidate_000199,single,single_candidate,a0*log(Abs(sin(c1/x1 + c2/x2))),12.151898734177216,-106.01746875007794,True,True
+46,79,candidate_000085,single,single_candidate,a0*log(Abs(c1*x1*x2 + cconst_product_0)),41.51898734177215,0.29195801155910894,False,True
+47,41,candidate_000121,single,single_candidate,a0*log(Abs(c2/(x1*x2) + cconst_product_0)),82.78481012658227,0.7650926305691426,True,True
+48,16,candidate_000120,single,single_candidate,a0*log(Abs(c2*x2/x1 + cconst_product_0)),45.56962025316456,0.48463853923615174,False,True
+49,126,candidate_000157,single,single_candidate,a0*log(Abs(cos(c1/x1 + c2/x2))),23.79746835443038,-4.184375904184984,True,True
+50,130,candidate_000155,single,single_candidate,a0*log(Abs(cos(c1/x1 + c2*x2))),5.569620253164557,-356.8220815675654,False,True
+51,250,candidate_000114,single,single_candidate,a0*log(Abs(c1/x2 + c2*x1*x2)),27.59493670886076,-1.4879710881386283,True,True
+52,3655,combination_031756,combination,binary_combination,a1*sin(c1_left*x1 + c2_left/x1) + a2*sin(c1_right*x2/x1 + c2_right*x2),63.29113924050633,0.7249221414813267,True,True
+53,26132,combination_000397,combination,binary_combination,a1*(c1_left*x1 + c2_left*x2/x1) + a2*log(Abs(cos(c1_right*x2/x1 + c2_right*x2))),55.18987341772152,0.6398941345137619,True,True
+54,19640,combination_003762,combination,binary_combination,a1*(c1_left*x2 + c2_left/(x1*x2)) + a2*cos(c1_right*x2/x1 + c2_right*x1),18.481012658227847,0.14231797881410857,True,True
+55,7323,combination_029335,combination,binary_combination,a1*log(Abs(sin(c1_left*x1*x2 + c2_left/x2))) + a2*log(Abs(sin(c1_right*x2/x1 + c2_right/x2))),11.89873417721519,-201.05371304311933,True,True
+56,2956,combination_006915,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(sin(c1_right*x1/x2))),37.21518987341772,0.19517970175979338,True,True
+57,1628,combination_015460,combination,binary_combination,a1*cos(c1_left/x1 + c2_left*x1*x2) + a2*log(Abs(c1_right*x2)),24.556962025316455,-0.12612752883466705,True,True
+58,29653,combination_023435,combination,binary_combination,a1*log(Abs(c1_left/x2)) + a2*sin(c1_right*x2/x1 + c2_right*x1),31.39240506329114,0.8601902824526988,True,True
+59,8853,combination_005697,combination,binary_combination,a1*(c1_left/x1 + c2_left*x2) + a2*log(Abs(c1_right/x1 + c2_right*x1)),47.08860759493671,0.5257051035852442,True,True
+60,11424,combination_031540,combination,binary_combination,a1*log(Abs(sin(c2_left*x2 + cconst_product_0_left))) + a2*sin(c1_right*x2/x1),17.468354430379748,-96.15309164878099,False,True
+61,21387,combination_011172,combination,binary_combination,a1*cos(c1_left*x1/x2 + c2_left/(x1*x2)) + a2*log(Abs(c1_right/x1 + c2_right*x1)),38.22784810126582,0.1844616774920803,True,True
+62,6787,combination_016459,combination,binary_combination,a1*cos(c1_left/x2) + a2*log(Abs(sin(c1_right*x2 + c2_right/(x1*x2)))),40.50632911392405,0.40808206347840603,True,True
+63,2862,combination_011797,combination,binary_combination,a1*cos(c1_left*x2 + c2_left*x1*x2) + a2*log(Abs(c1_right/x2)),26.075949367088608,0.7456306875469207,True,True
+64,23123,combination_019491,combination,binary_combination,a1*log(Abs(c1_left*x1/x2)) + a2*log(Abs(cos(c1_right/(x1*x2) + c2_right*x1*x2))),30.379746835443036,0.7421549916125408,True,True
+65,10750,combination_028468,combination,binary_combination,a1*log(Abs(cos(c2_left*x1*x2 + cconst_product_0_left))) + a2*log(Abs(sin(c1_right*x1/x2 + c2_right/x1))),10.632911392405063,-272.6620645901638,True,True
+66,22827,combination_004873,combination,binary_combination,a1*(c1_left/(x1*x2) + c2_left*x1) + a2*sin(c1_right*x1*x2 + c2_right/x2),90.37974683544304,0.8586441223268171,True,True
+67,4813,combination_021361,combination,binary_combination,a1*log(Abs(c1_left/(x1*x2) + c2_left*x1*x2)) + a2*log(Abs(cos(c1_right/(x1*x2) + c2_right/x1))),61.265822784810126,0.8360660438831964,True,True
+68,3736,combination_007473,combination,binary_combination,a1*c1_left*x2 + a2*cos(c1_right/(x1*x2) + c2_right/x1),56.20253164556962,0.829339526731891,True,True
+69,24146,combination_013703,combination,binary_combination,a1*cos(c1_left*x2/x1 + c2_left/(x1*x2)) + a2*sin(c1_right*x2/x1 + c2_right/(x1*x2)),53.67088607594937,0.8520450475282334,True,True
+70,5391,combination_027601,combination,binary_combination,a1*log(Abs(cos(c1_left/x1 + c2_left*x2))) + a2*log(Abs(cos(c2_right/x2 + cconst_product_0_right))),21.0126582278481,-81.4700392948332,True,True
+71,438,combination_014271,combination,binary_combination,a1*cos(c1_left*x2/x1) + a2*sin(c1_right*x1/x2 + c2_right*x2/x1),42.78481012658228,0.43719709137926277,False,True
+72,26042,combination_012976,combination,binary_combination,a1*cos(c1_left*x2) + a2*log(Abs(c1_right*x2 + cconst_product_0_right)),56.45569620253165,0.6389698534538013,False,True
+73,27765,combination_020690,combination,binary_combination,a1*log(Abs(c1_left*x2/x1 + c2_left*x2)) + a2*sin(c1_right/(x1*x2)),21.772151898734176,0.8471185845515514,False,True
+74,23358,combination_012092,combination,binary_combination,a1*cos(c1_left*x2 + c2_left*x2/x1) + a2*log(Abs(sin(c2_right/x2 + cconst_product_0_right))),47.34177215189873,0.5697553104354399,True,True
+75,22232,combination_002984,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left/x2) + a2*sin(c1_right/x1),74.9367088607595,0.8521321425107673,True,True
+76,23788,combination_030438,combination,binary_combination,a1*log(Abs(sin(c1_left*x2/x1 + c2_left*x1/x2))) + a2*log(Abs(sin(c1_right/x1 + c2_right/x2))),15.949367088607595,-7.962682655970324,False,True
+77,29196,combination_000209,combination,binary_combination,a1*(c1_left*x1 + c2_left*x1/x2) + a2*log(Abs(sin(c2_right/(x1*x2) + cconst_product_0_right))),92.65822784810126,0.8696030440242037,False,True
+78,27511,combination_022394,combination,binary_combination,a1*log(Abs(c1_left/x1)) + a2*log(Abs(cos(c2_right*x1 + cconst_product_0_right))),53.924050632911396,0.6449816962326147,True,True
+79,19032,combination_022191,combination,binary_combination,a1*log(Abs(c1_left/x1 + c2_left*x1/x2)) + a2*sin(c1_right/x2 + c2_right*x1),30.88607594936709,0.8532676534823053,True,True
+80,19054,combination_001577,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left*x1*x2) + a2*cos(c1_right/x1 + c2_right*x1),57.721518987341774,0.8516743439721335,False,True
+81,7319,combination_008349,combination,binary_combination,a1*c1_left/x2 + a2*cos(c1_right*x2 + c2_right/x2),6.582278481012659,-166.87329402492202,False,True
+82,16893,combination_032625,combination,binary_combination,a1*sin(c1_left/x2 + cconst_product_0_left) + a2*sin(c1_right/x2),56.962025316455694,0.7747335644192295,True,True
+83,24716,combination_023687,combination,binary_combination,a1*log(Abs(c2_left/(x1*x2) + cconst_product_0_left)) + a2*sin(c1_right*x1 + cconst_product_0_right),86.58227848101266,0.8485437520145587,False,True
+84,27473,combination_022258,combination,binary_combination,a1*log(Abs(c1_left/x1 + c2_left*x2)) + a2*log(Abs(sin(c1_right*x1 + c2_right*x2))),24.810126582278482,-4.129716464512481,True,True
+85,13066,combination_009281,combination,binary_combination,a1*cos(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right/x2 + c2_right/(x1*x2))),33.924050632911396,0.8567435047555816,True,True
+86,15797,combination_005835,combination,binary_combination,a1*(c1_left/x1 + c2_left*x2) + a2*sin(c1_right/x2 + c2_right*x1),12.91139240506329,-213.10970778533834,True,True
+87,30155,combination_009316,combination,binary_combination,a1*cos(c1_left*x1 + c2_left/x2) + a2*log(Abs(cos(c1_right/(x1*x2) + c2_right/x1))),96.70886075949367,0.8692457620099877,True,True
+88,15583,combination_009024,combination,binary_combination,a1*cos(c1_left*x1 + c2_left*x2) + a2*cos(c2_right*x1*x2 + cconst_product_0_right),1.7721518987341771,-654.2739503239806,True,True
+89,28241,combination_004022,combination,binary_combination,a1*(c1_left*x2/x1 + c2_left*x1*x2) + a2*cos(c2_right/x2 + cconst_product_0_right),17.21518987341772,0.8559424270799747,True,True
+90,1004,combination_006035,combination,binary_combination,a1*(c1_left/x1 + c2_left/x2) + a2*sin(c1_right*x1*x2 + c2_right*x1),9.367088607594937,0.8384727800529383,True,True
+91,32015,combination_030394,combination,binary_combination,a1*log(Abs(sin(c1_left*x2/x1 + c2_left*x1*x2))) + a2*sin(c1_right*x1/x2 + c2_right*x1),0.0,-485.7791239995489,True,True
+92,21884,combination_025384,combination,binary_combination,a1*log(Abs(cos(c1_left*x1/x2 + c2_left/x1))) + a2*log(Abs(cos(c1_right*x2 + c2_right/x2))),13.924050632911392,-159.0696645869121,True,True
+93,2602,combination_025217,combination,binary_combination,a1*log(Abs(cos(c1_left*x1*x2 + c2_left/x1))) + a2*sin(c1_right*x1 + cconst_product_0_right),52.151898734177216,0.6121453957063482,False,True
+94,28034,combination_007173,combination,binary_combination,a1*c1_left*x1*x2 + a2*sin(c1_right*x1 + cconst_product_0_right),71.39240506329114,0.8249487258971633,True,True
+95,12540,combination_032473,combination,binary_combination,a1*sin(c1_left*x2/x1) + a2*sin(c1_right/x1 + c2_right*x1*x2),12.658227848101266,-130.41852184480157,True,True
+96,27213,combination_024809,combination,binary_combination,a1*log(Abs(cos(c1_left*x1))) + a2*log(Abs(sin(c1_right*x1*x2))),20.50632911392405,-85.31094972434508,True,True
+97,21164,combination_004092,combination,binary_combination,a1*(c1_left*x2/x1 + c2_left*x1*x2) + a2*log(Abs(cos(c1_right/(x1*x2) + c2_right*x1/x2))),11.645569620253164,-229.59470978054412,False,True
+98,20393,combination_025232,combination,binary_combination,a1*log(Abs(cos(c1_left*x1*x2 + c2_left/x1))) + a2*sin(c1_right*x2 + c2_right/x2),9.113924050632912,-401.9261641942872,True,True
+99,30029,combination_027978,combination,binary_combination,a1*log(Abs(cos(c1_left/x1))) + a2*sin(c1_right/x2 + cconst_product_0_right),50.379746835443036,0.8465315858472223,True,True
+100,32384,combination_028358,combination,binary_combination,a1*log(Abs(cos(c1_left/x2))) + a2*sin(c2_right*x1*x2 + cconst_product_0_right),5.822784810126582,-375.60045876756766,True,True
+101,14597,combination_031071,combination,binary_combination,a1*log(Abs(sin(c1_left/x1 + c2_left/x2))) + a2*sin(c1_right*x1/x2),14.177215189873417,-16.420714892227675,True,True
+102,32020,combination_001943,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left*x2) + a2*log(Abs(sin(c1_right*x2/x1 + c2_right*x1))),17.974683544303797,-0.9752249985077646,True,True
+103,19618,combination_021557,combination,binary_combination,a1*log(Abs(c1_left/(x1*x2) + c2_left*x2)) + a2*log(Abs(sin(c1_right/x1 + c2_right/x2))),23.544303797468356,0.8508976317666226,True,True
+104,3435,combination_018543,combination,binary_combination,a1*log(Abs(c1_left*x1/x2 + c2_left*x1)) + a2*log(Abs(sin(c1_right*x2/x1 + c2_right*x1))),93.92405063291139,0.8586524117492657,False,True
+105,30124,combination_017389,combination,binary_combination,a1*log(Abs(c1_left*x1 + c2_left*x1*x2)) + a2*sin(c1_right*x2),56.70886075949367,0.6909979532925559,True,True
+106,24111,combination_004654,combination,binary_combination,a1*(c1_left*x2/x1 + c2_left/x1) + a2*sin(c1_right*x2/x1 + c2_right/x2),60.25316455696203,0.8647619399271098,True,True
+107,15810,combination_004465,combination,binary_combination,a1*(c1_left*x2/x1 + c2_left/x1) + a2*cos(c1_right*x1/x2 + c2_right*x2/x1),45.31645569620253,0.47896599676690244,True,True
+108,1329,combination_002252,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left*x2/x1) + a2*sin(c1_right/x2 + c2_right/(x1*x2)),19.240506329113924,0.046328139537236135,True,True
+109,21228,combination_001393,combination,binary_combination,a1*(c1_left*x1*x2 + c2_left/x1) + a2*log(Abs(cos(c1_right*x1*x2))),46.075949367088604,0.4498891040804852,True,True
+110,11548,combination_016286,combination,binary_combination,a1*cos(c1_left/x2 + c2_left/x1) + a2*log(Abs(sin(c1_right*x2/x1))),25.063291139240505,0.8641192587403221,True,True
+111,6082,combination_008506,combination,binary_combination,a1*c1_left/x2 + a2*sin(c1_right*x1 + c2_right*x2),9.620253164556962,-181.58136401913765,True,True
+112,28464,combination_005874,combination,binary_combination,a1*(c1_left/x1 + c2_left/x2) + a2*cos(c1_right*x2 + c2_right/x2),10.886075949367088,0.8628339097728067,True,True
+113,29062,combination_004672,combination,binary_combination,a1*(c1_left*x2/x1 + c2_left/x1) + a2*sin(c2_right*x2/x1 + cconst_product_0_right),59.74683544303797,0.8448706470871479,True,True
+114,25317,combination_031200,combination,binary_combination,a1*log(Abs(sin(c1_left/x1))) + a2*sin(c1_right/x2 + c2_right*x1),60.75949367088607,0.863695425665728,True,True
+115,16807,combination_011127,combination,binary_combination,a1*cos(c1_left*x1/x2 + c2_left/(x1*x2)) + a2*cos(c1_right/(x1*x2) + c2_right*x1),41.265822784810126,0.1780421786215426,True,True
+116,11171,combination_017757,combination,binary_combination,a1*log(Abs(c1_left*x1)) + a2*sin(c1_right/x2),53.164556962025316,0.8005973104532158,True,True
+117,6604,combination_000601,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x2 + cconst_product_0_right)),94.68354430379746,0.8431116524883107,True,True
+118,11106,combination_013958,combination,binary_combination,a1*cos(c1_left*x2/x1 + cconst_product_0_left) + a2*log(Abs(c1_right*x2/x1 + c2_right/x1)),58.9873417721519,0.8624676340904042,True,True
+119,8964,combination_027411,combination,binary_combination,a1*log(Abs(cos(c1_left/(x1*x2) + c2_left/x2))) + a2*log(Abs(sin(c1_right*x1/x2 + c2_right/(x1*x2)))),9.873417721518987,-272.6541356588891,True,True
+120,32235,combination_031847,combination,binary_combination,a1*sin(c1_left*x1) + a2*sin(c1_right/x1 + c2_right*x2),43.037974683544306,0.32353303126746713,False,True
+121,307,combination_009514,combination,binary_combination,a1*cos(c1_left*x1 + cconst_product_0_left) + a2*log(Abs(cos(c1_right*x1/x2 + c2_right/x1))),50.63291139240506,0.6135942478791698,False,True
+122,12682,combination_012647,combination,binary_combination,a1*cos(c1_left*x2 + c2_left/x2) + a2*log(Abs(cos(c2_right*x1 + cconst_product_0_right))),31.645569620253166,0.6055022897691247,True,True
+123,16481,combination_000529,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*(c1_right/x1 + c2_right*x2),84.81012658227849,0.8509817290148232,True,True
+124,7175,combination_006767,combination,binary_combination,a1*c1_left*x1 + a2*c1_right/x1,48.860759493670884,0.603657192509629,True,True
+125,2656,combination_013534,combination,binary_combination,a1*cos(c1_left*x2/x1 + c2_left/(x1*x2)) + a2*cos(c1_right/(x1*x2) + c2_right/x1),68.35443037974683,0.8628847983462199,True,True
+126,9550,combination_008101,combination,binary_combination,a1*c1_left/(x1*x2) + a2*sin(c1_right/x2 + c2_right*x1/x2),3.7974683544303796,-187.491874534257,True,True
+127,10344,combination_016899,combination,binary_combination,a1*cos(c2_left/x1 + cconst_product_0_left) + a2*log(Abs(c1_right*x1/x2 + c2_right/x2)),75.18987341772151,0.8379075609224952,False,True
+128,27192,combination_024170,combination,binary_combination,a1*log(Abs(cos(c1_left*x1 + c2_left*x1/x2))) + a2*log(Abs(sin(c1_right*x1 + c2_right/(x1*x2)))),16.962025316455698,-115.94456045286094,False,True
+129,28402,combination_016260,combination,binary_combination,a1*cos(c1_left/x2 + c2_left/x1) + a2*log(Abs(cos(c2_right/x1 + cconst_product_0_right))),60.0,0.8615544081346889,True,True
+130,18905,combination_001831,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left*x2) + a2*cos(c1_right/x2),16.455696202531644,0.7271876272820034,True,True
+131,5776,combination_004066,combination,binary_combination,a1*(c1_left*x2/x1 + c2_left*x1*x2) + a2*log(Abs(c2_right/x2 + cconst_product_0_right)),83.79746835443038,0.8227171096180861,True,True
+132,21166,combination_028448,combination,binary_combination,a1*log(Abs(cos(c2_left*x1 + cconst_product_0_left))) + a2*sin(c1_right/x2 + cconst_product_0_right),50.12658227848101,0.8514475042371197,False,True
+133,5211,combination_032318,combination,binary_combination,a1*sin(c1_left*x2) + a2*sin(c1_right*x2/x1 + c2_right/(x1*x2)),18.227848101265824,-0.11335744145802784,True,True
+134,11981,combination_018546,combination,binary_combination,a1*log(Abs(c1_left*x1/x2 + c2_left*x1)) + a2*log(Abs(sin(c1_right*x2/x1 + c2_right/x1))),82.53164556962025,0.8553699218164391,True,True
+135,6011,combination_010506,combination,binary_combination,a1*cos(c1_left*x1*x2) + a2*cos(c1_right/(x1*x2) + cconst_product_0_right),71.89873417721519,0.8552745888016516,True,True
+136,23744,combination_006534,combination,binary_combination,a1*(c1_left/x2 + c2_left*x2/x1) + a2*c1_right*x1,70.37974683544304,0.8420701003787258,False,True
+137,16029,combination_032350,combination,binary_combination,a1*sin(c1_left*x2/x1 + c2_left*x1) + a2*sin(c1_right/x1 + c2_right*x1*x2),39.74683544303797,0.1935941115786317,True,True
+138,31965,combination_008531,combination,binary_combination,a1*c1_left/x2 + a2*sin(c1_right*x2/x1),20.253164556962027,-4.8753828892657305,True,True
+139,26442,combination_024022,combination,binary_combination,a1*log(Abs(cos(c1_left*x1 + c2_left*x1*x2))) + a2*log(Abs(cos(c1_right/(x1*x2) + c2_right/x2))),13.417721518987342,-245.74304434491089,True,True
+140,15202,combination_010756,combination,binary_combination,a1*cos(c1_left*x1/x2 + c2_left*x2) + a2*log(Abs(c1_right/(x1*x2))),23.29113924050633,0.7503791889533575,True,True
+141,28817,combination_006873,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(cos(c1_right*x2 + c2_right/x2))),42.53164556962025,0.5939978273704933,False,True
+142,8611,combination_012853,combination,binary_combination,a1*cos(c1_left*x2 + cconst_product_0_left) + a2*log(Abs(sin(c1_right*x1 + c2_right*x2))),8.354430379746836,-285.9989968176083,True,True
+143,5637,combination_031147,combination,binary_combination,a1*log(Abs(sin(c1_left/x1 + cconst_product_0_left))) + a2*sin(c1_right/x2 + c2_right*x1/x2),51.89873417721519,0.7085270548071215,True,True
+144,24586,combination_032338,combination,binary_combination,a1*sin(c1_left*x2) + a2*sin(c2_right*x2/x1 + cconst_product_0_right),55.69620253164557,0.6751295582230394,True,True
+145,14721,combination_024686,combination,binary_combination,a1*log(Abs(cos(c1_left*x1 + c2_left/x1))) + a2*log(Abs(sin(c1_right*x1/x2 + c2_right*x2))),42.278481012658226,0.6538422088121507,True,True
+146,20826,combination_018974,combination,binary_combination,a1*log(Abs(c1_left*x1/x2 + c2_left/(x1*x2))) + a2*log(Abs(c2_right*x2/x1 + cconst_product_0_right)),79.24050632911393,0.8530343935832666,False,True
+147,10723,combination_001160,combination,binary_combination,a1*(c1_left*x1*x2 + c2_left/(x1*x2)) + a2*log(Abs(cos(c1_right/(x1*x2) + c2_right*x2/x1))),15.443037974683545,0.7036521422191595,True,True
+148,25241,combination_027108,combination,binary_combination,a1*log(Abs(cos(c1_left/(x1*x2) + c2_left*x2))) + a2*log(Abs(sin(c1_right*x2 + c2_right*x2/x1))),13.670886075949367,-240.69767199819276,False,True
+149,31633,combination_002102,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left*x2/x1) + a2*log(Abs(c1_right*x2/x1 + c2_right*x1/x2)),34.936708860759495,0.8672987636981115,True,True
+150,32480,combination_030616,combination,binary_combination,a1*log(Abs(sin(c1_left*x2/x1 + c2_left/x2))) + a2*sin(c1_right/x2 + c2_right*x1/x2),10.126582278481013,-334.3151483575881,True,True
+151,23077,combination_020811,combination,binary_combination,a1*log(Abs(c1_left*x2/x1 + c2_left/(x1*x2))) + a2*log(Abs(sin(c2_right*x2 + cconst_product_0_right))),26.582278481012658,0.8189673877048732,False,True
+152,6933,combination_004256,combination,binary_combination,a1*(c1_left*x2/x1 + c2_left/(x1*x2)) + a2*cos(c1_right/x2),18.9873417721519,-9.681612632086024,True,True
+153,18800,combination_032554,combination,binary_combination,a1*sin(c1_left/x1 + c2_left*x1*x2) + a2*sin(c1_right/x2 + c2_right*x1/x2),0.759493670886076,-666.3267057229158,True,True
+154,14914,combination_013506,combination,binary_combination,a1*cos(c1_left*x2/x1 + c2_left*x1*x2) + a2*sin(c1_right*x2/x1 + c2_right*x1*x2),3.037974683544304,-652.4227507973777,False,True
+155,30696,combination_019213,combination,binary_combination,a1*log(Abs(c1_left*x1/x2 + c2_left/x2)) + a2*log(Abs(sin(c1_right/(x1*x2)))),41.77215189873418,0.8455487109619899,True,True
+156,15002,combination_010201,combination,binary_combination,a1*cos(c1_left*x1*x2 + c2_left/(x1*x2)) + a2*log(Abs(sin(c1_right*x2 + c2_right*x1*x2))),8.10126582278481,-362.3444355315692,True,True
+157,4559,combination_027558,combination,binary_combination,a1*log(Abs(cos(c1_left/(x1*x2)))) + a2*sin(c1_right*x1/x2 + c2_right/(x1*x2)),11.139240506329115,-287.97569068526633,True,True
+158,3913,combination_012615,combination,binary_combination,a1*cos(c1_left*x2 + c2_left/x2) + a2*log(Abs(cos(c1_right*x1*x2 + c2_right*x1/x2))),6.8354430379746836,-389.07215644001235,True,True
+159,23677,combination_025915,combination,binary_combination,a1*log(Abs(cos(c1_left*x2 + c2_left*x1/x2))) + a2*log(Abs(sin(c1_right/x1))),48.35443037974684,0.6293129562638977,True,True
+160,22629,combination_022838,combination,binary_combination,a1*log(Abs(c1_left/x2 + c2_left*x2)) + a2*log(Abs(sin(c1_right*x2 + c2_right*x2/x1))),34.43037974683544,0.851559957832999,True,True
+161,10123,combination_014069,combination,binary_combination,a1*cos(c1_left*x2/x1 + cconst_product_0_left) + a2*sin(c1_right*x1 + c2_right/x1),73.67088607594937,0.8351481837874237,True,True
+162,11040,combination_006324,combination,binary_combination,a1*(c1_left/x2 + c2_left*x2) + a2*cos(c1_right*x1/x2 + c2_right*x2),15.69620253164557,-24.862578263824474,True,True
+163,30702,combination_019733,combination,binary_combination,a1*log(Abs(c1_left*x2 + c2_left*x1)) + a2*sin(c1_right*x2 + c2_right/x2),71.64556962025317,0.8718128247808025,True,True
+164,5975,combination_007441,combination,binary_combination,a1*c1_left*x2 + a2*c1_right/(x1*x2),14.683544303797468,-24.765863657640587,True,True
+165,13123,combination_027281,combination,binary_combination,a1*log(Abs(cos(c1_left/(x1*x2) + c2_left*x2/x1))) + a2*sin(c2_right*x2 + cconst_product_0_right),14.936708860759493,0.5202582521013313,True,True
+166,12776,combination_008250,combination,binary_combination,a1*c1_left/x1 + a2*log(Abs(sin(c1_right*x1/x2 + c2_right*x1*x2))),36.962025316455694,0.11279670965900712,True,True
+167,23182,combination_032471,combination,binary_combination,a1*sin(c1_left*x2/x1) + a2*sin(c1_right/(x1*x2) + cconst_product_0_right),81.51898734177215,0.8630048424045524,True,True
+168,16636,combination_002659,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left/x1) + a2*log(Abs(cos(c2_right/(x1*x2) + cconst_product_0_right))),33.67088607594937,0.8420555287722765,True,True
+169,3745,combination_016525,combination,binary_combination,a1*cos(c1_left/x2) + a2*sin(c1_right/x2),34.177215189873415,-0.8809144837754486,True,True
+170,23652,combination_030852,combination,binary_combination,a1*log(Abs(sin(c1_left/(x1*x2)))) + a2*sin(c1_right/(x1*x2) + c2_right*x1),28.860759493670887,0.6105858867190062,True,True
+171,17408,combination_029288,combination,binary_combination,a1*log(Abs(sin(c1_left*x1*x2 + c2_left/x1))) + a2*sin(c1_right*x1/x2 + c2_right/x1),4.30379746835443,-478.47388066601474,True,True
+172,30057,combination_012709,combination,binary_combination,a1*cos(c1_left*x2 + c2_left/x2) + a2*sin(c1_right*x1/x2 + c2_right/x1),1.518987341772152,-455.27390119181615,True,True
+173,17857,combination_005437,combination,binary_combination,a1*(c1_left/x1 + c2_left*x1) + a2*log(Abs(c1_right*x1 + cconst_product_0_right)),49.620253164556964,0.6089052999083411,True,True
+174,23752,combination_011269,combination,binary_combination,a1*cos(c1_left*x1/x2 + c2_left/(x1*x2)) + a2*log(Abs(sin(c2_right*x1 + cconst_product_0_right))),27.848101265822784,0.633319579516108,True,True
+175,29399,combination_021174,combination,binary_combination,a1*log(Abs(c1_left/(x1*x2) + c2_left*x1)) + a2*log(Abs(c1_right/x2 + c2_right*x2)),79.74683544303798,0.8502020400105018,True,True
+176,22485,combination_007967,combination,binary_combination,a1*c1_left/(x1*x2) + a2*log(Abs(c1_right/x2 + c2_right*x1*x2)),32.65822784810127,0.8136018600336128,True,True
+177,11482,combination_017436,combination,binary_combination,a1*log(Abs(c1_left*x1 + cconst_product_0_left)) + a2*log(Abs(c1_right*x2/x1)),61.51898734177215,0.7284563212913404,True,True
+178,7977,combination_002955,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left/x2) + a2*sin(c1_right*x1*x2 + c2_right*x1/x2),6.329113924050633,-200.46446896565493,True,True
+179,8542,combination_004144,combination,binary_combination,a1*(c1_left*x2/x1 + c2_left*x1*x2) + a2*log(Abs(sin(c1_right/x1))),62.0253164556962,0.8292089015807875,False,True
+180,30324,combination_014078,combination,binary_combination,a1*cos(c1_left*x2/x1 + cconst_product_0_left) + a2*sin(c1_right*x1/x2 + c2_right*x2),42.0253164556962,0.5139914188827411,True,True
+181,9277,combination_023223,combination,binary_combination,a1*log(Abs(c1_left/x2 + c2_left/x1)) + a2*log(Abs(cos(c1_right/x1 + c2_right*x2))),26.329113924050635,0.7950725554515566,True,True
+182,27806,combination_021791,combination,binary_combination,a1*log(Abs(c1_left/(x1*x2))) + a2*log(Abs(cos(c1_right*x2 + c2_right*x1*x2))),22.531645569620252,0.7060811703833014,True,True
+183,30385,combination_021869,combination,binary_combination,a1*log(Abs(c1_left/(x1*x2))) + a2*sin(c1_right*x1*x2 + c2_right*x1),24.050632911392405,-0.5858831358102714,True,True
+184,7797,combination_024750,combination,binary_combination,a1*log(Abs(cos(c1_left*x1 + c2_left/x1))) + a2*sin(c1_right/(x1*x2)),32.40506329113924,-0.7560225947485226,True,True
+185,4778,combination_029086,combination,binary_combination,a1*log(Abs(sin(c1_left*x1 + c2_left/(x1*x2)))) + a2*log(Abs(sin(c1_right*x2/x1 + c2_right*x1*x2))),20.759493670886076,0.8397676107342611,False,True
+186,12660,combination_008329,combination,binary_combination,a1*c1_left/x1 + a2*sin(c2_right/x1 + cconst_product_0_right),49.36708860759494,0.6044378054758346,True,True
+187,9899,combination_001109,combination,binary_combination,a1*(c1_left*x1*x2 + c2_left/(x1*x2)) + a2*log(Abs(c1_right*x2/x1 + c2_right*x2)),33.164556962025316,0.8390164903150515,True,True
+188,23158,combination_003352,combination,binary_combination,a1*(c1_left*x2 + c2_left*x1*x2) + a2*log(Abs(cos(c1_right*x1 + c2_right/x1))),18.734177215189874,-90.94421318085301,True,True
+189,1131,combination_021116,combination,binary_combination,a1*log(Abs(c1_left*x2/x1)) + a2*log(Abs(sin(c2_right*x2 + cconst_product_0_right))),26.835443037974684,0.7384092816814485,True,True
+190,12234,combination_005975,combination,binary_combination,a1*(c1_left/x1 + c2_left/x2) + a2*log(Abs(cos(c1_right/x1 + c2_right*x2/x1))),98.22784810126582,0.8538522430035184,True,True
+191,7587,combination_032502,combination,binary_combination,a1*sin(c1_left/(x1*x2) + c2_left*x1) + a2*sin(c2_right*x2/x1 + cconst_product_0_right),51.139240506329116,0.8609433133703988,True,True
+192,934,combination_017805,combination,binary_combination,a1*log(Abs(c1_left*x1*x2 + c2_left*x2)) + a2*log(Abs(cos(c1_right*x1 + c2_right*x2/x1))),24.303797468354432,0.6003662153252464,True,True
+193,269,combination_010703,combination,binary_combination,a1*cos(c1_left*x1/x2 + c2_left*x2) + a2*cos(c1_right*x2 + c2_right/x2),2.278481012658228,-678.0958155520423,True,True
+194,12475,combination_018385,combination,binary_combination,a1*log(Abs(c1_left*x1*x2)) + a2*log(Abs(sin(c1_right/x1 + c2_right*x2))),28.10126582278481,0.018333502429288773,True,True
+195,2492,combination_017514,combination,binary_combination,a1*log(Abs(c1_left*x1 + cconst_product_0_left)) + a2*log(Abs(sin(c1_right*x1/x2 + cconst_product_0_right))),38.9873417721519,0.0005136049255561881,False,True
+196,1836,combination_013653,combination,binary_combination,a1*cos(c1_left*x2/x1 + c2_left/(x1*x2)) + a2*log(Abs(sin(c1_right*x2 + c2_right*x2/x1))),45.822784810126585,0.5514817263903266,True,True
+197,17805,combination_012716,combination,binary_combination,a1*cos(c1_left*x2 + c2_left/x2) + a2*sin(c1_right*x2/x1 + c2_right*x1*x2),1.2658227848101267,-649.2427597045611,True,True
+198,23905,combination_017179,combination,binary_combination,a1*cos(c2_left/x2 + cconst_product_0_left) + a2*log(Abs(sin(c1_right/(x1*x2)))),22.025316455696203,0.858837698649418,False,True
+199,30813,combination_019782,combination,binary_combination,a1*log(Abs(c1_left*x2 + cconst_product_0_left)) + a2*log(Abs(c1_right/x2 + c2_right/x1)),37.46835443037975,0.8612596131104653,True,True
+200,14641,combination_024313,combination,binary_combination,a1*log(Abs(cos(c1_left*x1 + c2_left*x2))) + a2*log(Abs(sin(c1_right*x2 + c2_right/(x1*x2)))),13.164556962025317,-225.52199444795122,False,True
+201,2915,combination_003228,combination,binary_combination,a1*(c1_left*x2 + c2_left*x1) + a2*sin(c1_right/x2 + c2_right*x1),76.9620253164557,0.865197898751792,True,True
+202,7465,combination_016839,combination,binary_combination,a1*cos(c2_left*x1/x2 + cconst_product_0_left) + a2*log(Abs(sin(c2_right*x2 + cconst_product_0_right))),10.379746835443038,-220.44811430202714,True,True
+203,2074,combination_022739,combination,binary_combination,a1*log(Abs(c1_left/x2 + c2_left*x1*x2)) + a2*sin(c1_right*x1/x2 + c2_right/x1),32.151898734177216,0.40893804732138683,True,True
+204,16656,combination_000758,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*sin(c2_right*x1*x2 + cconst_product_0_right),88.86075949367088,0.8438267454282765,True,True
+205,1116,combination_016563,combination,binary_combination,a1*cos(c2_left*x1*x2 + cconst_product_0_left) + a2*log(Abs(c1_right/x1 + c2_right*x1/x2)),29.620253164556964,0.7352382553719543,True,True
+206,19639,combination_003423,combination,binary_combination,a1*(c1_left*x2 + c2_left*x1*x2) + a2*log(Abs(sin(c1_right/x1 + cconst_product_0_right))),67.34177215189874,0.841982701625951,True,True
+207,25259,combination_001773,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left*x2) + a2*(c1_right*x2/x1 + c2_right/(x1*x2)),16.20253164556962,-9.323512523402815,True,True
+208,31843,combination_016784,combination,binary_combination,a1*cos(c2_left*x1/x2 + cconst_product_0_left) + a2*log(Abs(cos(c1_right/(x1*x2) + c2_right/x2))),3.5443037974683542,-308.7058412236625,True,True
+209,13201,combination_000042,combination,binary_combination,a1*(c1_left*x1 + c2_left*x1/x2) + a2*cos(c1_right*x1*x2 + c2_right/(x1*x2)),86.32911392405063,0.8428582251398291,True,True
+210,2839,combination_017542,combination,binary_combination,a1*log(Abs(c1_left*x1 + cconst_product_0_left)) + a2*log(Abs(sin(c2_right*x2/x1 + cconst_product_0_right))),77.9746835443038,0.8363185612068064,True,True
+211,21018,combination_007365,combination,binary_combination,a1*c1_left*x1/x2 + a2*log(Abs(sin(c1_right*x1/x2 + cconst_product_0_right))),11.39240506329114,-205.7056630240708,True,True
+212,2280,combination_000587,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x1 + cconst_product_0_right)),95.69620253164557,0.7918647672015627,True,True
+213,28598,combination_000591,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x1*x2 + cconst_product_0_right)),48.10126582278481,0.6800614014950084,True,True
+214,20288,combination_008168,combination,binary_combination,a1*c1_left/x1 + a2*log(Abs(c1_right*x2 + c2_right*x1)),68.10126582278481,0.728874581454847,True,True
+215,16782,combination_000626,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c2_right*x2/x1 + cconst_product_0_right)),96.45569620253164,0.7838322459888003,True,True
+216,16083,combination_008171,combination,binary_combination,a1*c1_left/x1 + a2*log(Abs(c1_right*x2/x1 + c2_right*x1)),44.55696202531646,0.44678738235431825,True,True
+217,19843,combination_009687,combination,binary_combination,a1*cos(c1_left*x1) + a2*log(Abs(c1_right*x2 + c2_right*x1)),69.36708860759494,0.7306327852437315,True,True
+218,24633,combination_007502,combination,binary_combination,a1*c1_left*x2 + a2*log(Abs(c1_right*x2 + c2_right*x1)),46.32911392405063,0.4709008426439365,False,True
+219,18722,combination_000598,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x1/x2 + cconst_product_0_right)),44.30379746835443,0.6871693760240267,True,True
+220,29851,combination_019750,combination,binary_combination,a1*log(Abs(c1_left*x2 + c2_left*x1)) + a2*sin(c1_right/x1),70.63291139240506,0.6643259043930858,True,True
+221,18346,combination_000840,combination,binary_combination,a1*(c1_left*x1*x2 + c2_left*x1) + a2*log(Abs(c1_right*x1)),67.59493670886076,0.7270633594210275,True,True
+222,11575,combination_016356,combination,binary_combination,a1*cos(c1_left/x2) + a2*log(Abs(c1_right*x1)),54.43037974683544,0.7226137013978551,False,True
+223,30216,combination_020171,combination,binary_combination,a1*log(Abs(c1_left*x2/x1 + c2_left*x1)) + a2*log(Abs(sin(c1_right*x2/x1 + c2_right/x1))),70.12658227848101,0.7395622180841196,True,True
+224,21516,combination_019755,combination,binary_combination,a1*log(Abs(c1_left*x2 + c2_left*x1)) + a2*sin(c1_right/x2),55.44303797468354,0.7209732068914962,True,True
+225,10127,combination_008388,combination,binary_combination,a1*c1_left/x2 + a2*log(Abs(c1_right*x2 + c2_right*x1)),88.35443037974683,0.7815424026078958,True,True
+226,32841,combination_012962,combination,binary_combination,a1*cos(c1_left*x2) + a2*log(Abs(c1_right*x1 + cconst_product_0_right)),52.40506329113924,0.5620226595252135,True,True
+227,31308,combination_000600,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x2 + c2_right*x1)),91.64556962025317,0.7855960419698638,False,True
+228,27514,combination_000678,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c1_right*x1))),94.17721518987342,0.7888818811560375,True,True
+229,9823,combination_012975,combination,binary_combination,a1*cos(c1_left*x2) + a2*log(Abs(c1_right*x2 + c2_right*x1)),84.30379746835443,0.7703934018893493,True,True
+230,32370,combination_012963,combination,binary_combination,a1*cos(c1_left*x2) + a2*log(Abs(c1_right*x1)),51.392405063291136,0.5516706543688912,True,True
+231,24427,combination_017592,combination,binary_combination,a1*log(Abs(c1_left*x1)) + a2*log(Abs(c1_right*x1*x2)),59.49367088607595,0.6722802894120381,True,True
+232,20517,combination_000586,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x1 + c2_right*x1*x2)),96.20253164556962,0.7988945288860163,True,True
+233,4134,combination_000588,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x1)),98.9873417721519,0.7962295988440786,True,True
+234,29519,combination_008376,combination,binary_combination,a1*c1_left/x2 + a2*log(Abs(c1_right*x1)),90.12658227848101,0.7769141932528886,True,True
+235,13029,combination_008375,combination,binary_combination,a1*c1_left/x2 + a2*log(Abs(c1_right*x1 + cconst_product_0_right)),58.22784810126582,0.7288147982902817,True,True
+236,27166,combination_003153,combination,binary_combination,a1*(c1_left*x2 + c2_left*x1) + a2*log(Abs(sin(c1_right*x1))),65.82278481012658,0.7292230129087106,True,True
+237,2725,combination_000593,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x1/x2 + c2_right*x1)),90.88607594936708,0.7854556854149046,True,True
+238,10269,combination_000681,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c1_right*x1*x2))),92.9113924050633,0.7854235314896447,True,True
+239,20984,combination_003067,combination,binary_combination,a1*(c1_left*x2 + c2_left*x1) + a2*log(Abs(c1_right*x1*x2)),77.46835443037975,0.7582368323631071,True,True
+240,17537,combination_017602,combination,binary_combination,a1*log(Abs(c1_left*x1)) + a2*log(Abs(c1_right*x2)),58.48101265822785,0.6612916348315543,True,True
+241,9996,combination_017692,combination,binary_combination,a1*log(Abs(c1_left*x1)) + a2*log(Abs(sin(c1_right*x2))),53.41772151898734,0.6960778450588654,True,True
+242,30517,combination_000610,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right/(x1*x2) + c2_right*x1)),97.72151898734177,0.7937894655941011,True,True
+243,20742,combination_008407,combination,binary_combination,a1*c1_left/x2 + a2*log(Abs(c1_right/x2 + c2_right*x1)),93.67088607594937,0.7829624641549712,True,True
+244,10311,combination_003111,combination,binary_combination,a1*(c1_left*x2 + c2_left*x1) + a2*log(Abs(cos(c1_right*x1))),69.87341772151899,0.7339340282655629,True,True
+245,31672,combination_017648,combination,binary_combination,a1*log(Abs(c1_left*x1)) + a2*log(Abs(cos(c1_right*x2))),43.54430379746835,0.4504489058085892,False,True
+246,22981,combination_006819,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right*x1*x2)),64.30379746835443,0.6907493981467685,True,True
+247,13712,combination_000603,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x2/x1 + c2_right*x1)),94.9367088607595,0.7905352284221165,True,True
+248,21715,combination_000959,combination,binary_combination,a1*(c1_left*x1*x2 + c2_left*x1) + a2*log(Abs(sin(c1_right/x1))),63.037974683544306,0.7213535162590472,False,True
+249,2018,combination_012765,combination,binary_combination,a1*cos(c1_left*x2 + cconst_product_0_left) + a2*log(Abs(c1_right*x1)),50.88607594936709,0.5556148963985971,True,True
+250,12407,combination_017736,combination,binary_combination,a1*log(Abs(c1_left*x1)) + a2*sin(c1_right*x2),45.063291139240505,0.445569879422552,True,True
+251,374,combination_000707,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c1_right/x1))),81.77215189873418,0.7696737979420532,True,True
+252,25032,combination_000916,combination,binary_combination,a1*(c1_left*x1*x2 + c2_left*x1) + a2*log(Abs(cos(c1_right/x1))),65.31645569620254,0.7235155237112987,True,True
+253,26399,combination_019719,combination,binary_combination,a1*log(Abs(c1_left*x2 + c2_left*x1)) + a2*sin(c1_right*x1),69.11392405063292,0.7308304393257805,True,True
+254,30640,combination_017563,combination,binary_combination,a1*log(Abs(c1_left*x1 + cconst_product_0_left)) + a2*sin(c1_right*x2),57.46835443037975,0.6623739894456848,True,True
+255,8430,combination_007040,combination,binary_combination,a1*c1_left*x1*x2 + a2*log(Abs(c1_right*x1 + cconst_product_0_right)),63.54430379746835,0.7210457925147216,True,True
+256,15357,combination_000615,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right/x1 + c2_right*x1)),96.9620253164557,0.7922907118072208,True,True
+257,2505,combination_000592,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x1*x2)),54.68354430379747,0.7220426989517401,True,True
+258,31517,combination_003063,combination,binary_combination,a1*(c1_left*x2 + c2_left*x1) + a2*log(Abs(c1_right*x1)),67.84810126582279,0.7282841905287375,True,True
+259,29982,combination_007489,combination,binary_combination,a1*c1_left*x2 + a2*log(Abs(c1_right*x1 + cconst_product_0_right)),66.83544303797468,0.7266899890705028,True,True
+260,24960,combination_006940,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(sin(c2_right*x1*x2 + cconst_product_0_right))),40.0,0.3048828951851056,True,True
+261,7039,combination_000619,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right/x2 + c2_right*x1)),97.9746835443038,0.7918855844964601,True,True
+262,30295,combination_000618,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right/x1)),93.41772151898734,0.7890271297488395,False,True
+263,20129,combination_022484,combination,binary_combination,a1*log(Abs(c1_left/x1)) + a2*sin(c2_right*x2 + cconst_product_0_right),59.24050632911393,0.6821193467299562,False,True
+264,6171,combination_006818,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right*x1*x2 + cconst_product_0_right)),81.0126582278481,0.7423566125496519,False,True
+265,14536,combination_006897,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(cos(c2_right*x1*x2 + cconst_product_0_right))),38.48101265822785,0.3167994347008891,True,True
+266,16325,combination_000612,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right/(x1*x2) + c2_right*x2)),54.177215189873415,0.7214282533012362,True,True
+267,26659,combination_000636,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(cos(c1_right*x1))),85.31645569620254,0.7717787127173346,False,True
+268,19845,combination_018402,combination,binary_combination,a1*log(Abs(c1_left*x1*x2)) + a2*sin(c1_right*x1 + cconst_product_0_right),80.0,0.7563494436070005,True,True
+269,4550,combination_006867,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(cos(c1_right*x1*x2))),36.20253164556962,0.13811494303292204,True,True
+270,5831,combination_006827,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right*x2 + c2_right*x1)),71.13924050632912,0.7298575394880463,True,True
+271,17367,combination_000608,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x2/x1 + c2_right/x1)),90.63291139240506,0.7917144482758098,True,True
+272,18618,combination_000640,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(cos(c1_right*x1*x2))),89.87341772151899,0.7796846073272501,True,True
+273,16872,combination_007265,combination,binary_combination,a1*c1_left*x1/x2 + a2*log(Abs(c1_right*x1 + cconst_product_0_right)),88.10126582278481,0.7761902126734157,True,True
+274,17676,combination_006836,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right*x2/x1)),64.0506329113924,0.6896947594759919,True,True
+275,19902,combination_017759,combination,binary_combination,a1*log(Abs(c1_left*x1)) + a2*sin(c2_right*x2 + cconst_product_0_right),57.9746835443038,0.6678733509490506,True,True
+276,3065,combination_000607,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x2/x1 + c2_right/(x1*x2))),99.49367088607595,0.803623374566918,True,True
+277,9646,combination_003084,combination,binary_combination,a1*(c1_left*x2 + c2_left*x1) + a2*log(Abs(c1_right*x2/x1)),76.70886075949367,0.7569542717590343,True,True
+278,6941,combination_017584,combination,binary_combination,a1*log(Abs(c1_left*x1 + cconst_product_0_left)) + a2*sin(c1_right/x2),80.50632911392405,0.7394254275163286,False,True
+279,24950,combination_006826,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right*x1/x2)),62.78481012658228,0.6852039165248621,True,True
+280,10590,combination_007044,combination,binary_combination,a1*c1_left*x1*x2 + a2*log(Abs(c1_right*x1*x2 + cconst_product_0_right)),35.18987341772152,-0.04264997301287221,False,True
+281,25272,combination_000609,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right*x2/x1)),92.15189873417721,0.7866366821479327,True,True
+282,31335,combination_007712,combination,binary_combination,a1*c1_left*x2/x1 + a2*log(Abs(c1_right*x1 + cconst_product_0_right)),48.607594936708864,0.5051394496360184,True,True
+283,5638,combination_021163,combination,binary_combination,a1*log(Abs(c1_left*x2/x1)) + a2*sin(c2_right/x1 + cconst_product_0_right),76.45569620253164,0.753066867551669,True,True
+284,24697,combination_007266,combination,binary_combination,a1*c1_left*x1/x2 + a2*log(Abs(c1_right*x1)),93.16455696202532,0.7825428951406164,True,True
+285,12018,combination_006870,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(cos(c1_right*x1/x2))),37.721518987341774,0.22564829433188682,True,True
+286,3444,combination_000628,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c2_right/x1 + cconst_product_0_right)),85.82278481012658,0.7729618992082192,True,True
+287,4941,combination_018441,combination,binary_combination,a1*log(Abs(c1_left*x1*x2)) + a2*sin(c2_right*x2 + cconst_product_0_right),27.088607594936708,-1.8208459349878265,True,True
+288,32505,combination_023553,combination,binary_combination,a1*log(Abs(c2_left*x2/x1 + cconst_product_0_left)) + a2*sin(c1_right*x1 + cconst_product_0_right),74.43037974683544,0.739345172919367,True,True
+289,24910,combination_007713,combination,binary_combination,a1*c1_left*x2/x1 + a2*log(Abs(c1_right*x1)),47.848101265822784,0.4991437714225452,True,True
+290,18997,combination_006880,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(cos(c1_right*x2/x1))),40.75949367088607,0.2680007583462215,True,True
+291,18989,combination_000627,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c2_right/(x1*x2) + cconst_product_0_right)),98.48101265822785,0.7948435171475904,True,True
+292,11817,combination_019593,combination,binary_combination,a1*log(Abs(c1_left*x1/x2)) + a2*sin(c1_right/x2 + cconst_product_0_right),28.60759493670886,-0.8187182461468123,True,True
+293,7641,combination_006825,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right*x1/x2 + cconst_product_0_right)),74.17721518987342,0.7491430358169037,True,True
+294,31363,combination_007160,combination,binary_combination,a1*c1_left*x1*x2 + a2*log(Abs(sin(c1_right/x1))),67.0886075949367,0.7255591913329141,True,True
+295,20408,combination_000622,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right/x2 + c2_right*x2/x1)),94.43037974683544,0.7888107278952956,False,True
+296,17816,combination_019598,combination,binary_combination,a1*log(Abs(c1_left*x1/x2)) + a2*sin(c2_right/x1 + cconst_product_0_right),77.72151898734177,0.7543921899395255,True,True
+297,14794,combination_006853,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c2_right*x2/x1 + cconst_product_0_right)),76.20253164556962,0.7428424674831485,False,True
+298,26526,combination_006925,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(sin(c1_right*x2/x1))),72.65822784810126,0.7371449126323304,True,True
+299,21022,combination_000658,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(cos(c1_right/(x1*x2) + c2_right/x1))),87.34177215189874,0.7862219586235921,True,True
+300,6224,combination_019434,combination,binary_combination,a1*log(Abs(c1_left*x1/x2 + cconst_product_0_left)) + a2*sin(c2_right*x2 + cconst_product_0_right),30.632911392405063,-0.39300279014476525,True,True
+301,32742,combination_006816,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right*x1*x2 + c2_right*x2)),64.55696202531645,0.6921969143657936,True,True
+302,311,combination_010521,combination,binary_combination,a1*cos(c1_left*x1*x2) + a2*log(Abs(c1_right*x1)),39.49367088607595,0.23707970940077094,True,True
+303,24426,combination_019995,combination,binary_combination,a1*log(Abs(c1_left*x2)) + a2*log(Abs(sin(c1_right*x1))),29.873417721518987,-0.7337764173357191,True,True
+304,6233,combination_000613,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right/(x1*x2) + c2_right/x1)),95.44303797468355,0.7952166549503444,True,True
+305,26293,combination_007297,combination,binary_combination,a1*c1_left*x1/x2 + a2*log(Abs(c1_right/x2 + c2_right*x1)),79.49367088607595,0.7578741056424585,False,True
+306,14382,combination_006846,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right/x2 + c2_right*x1)),89.36708860759494,0.7817876431064833,False,True
+307,1381,combination_007117,combination,binary_combination,a1*c1_left*x1*x2 + a2*log(Abs(cos(c1_right/x1))),68.86075949367088,0.7288625415079703,True,True
+308,17831,combination_000623,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right/x2 + c2_right/(x1*x2))),78.73417721518987,0.7633249553733977,True,True
+309,20819,combination_007293,combination,binary_combination,a1*c1_left*x1/x2 + a2*log(Abs(c1_right/x1 + c2_right*x1)),84.55696202531645,0.7684648782029035,False,True
+310,2502,combination_006844,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right/x1 + c2_right*x2)),81.26582278481013,0.7484120916531731,True,True
+311,23459,combination_017726,combination,binary_combination,a1*log(Abs(c1_left*x1)) + a2*sin(c1_right*x1*x2),37.9746835443038,0.21840819520940014,True,True
+312,19905,combination_000614,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(c1_right/(x1*x2))),83.29113924050633,0.773269494770632,True,True
+313,27842,combination_007278,combination,binary_combination,a1*c1_left*x1/x2 + a2*log(Abs(c1_right*x2 + c2_right*x1)),87.84810126582279,0.776159589631175,True,True
+314,12773,combination_006813,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right*x1 + c2_right*x1*x2)),80.75949367088607,0.7501849245564285,True,True
+315,421,combination_006908,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(sin(c1_right*x1*x2))),36.45569620253165,0.1612234512118128,False,True
+316,19932,combination_009727,combination,binary_combination,a1*cos(c1_left*x1) + a2*log(Abs(cos(c1_right*x1*x2))),43.79746835443038,0.4157159060920165,True,True
+317,8470,combination_000654,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(cos(c1_right/(x1*x2) + c2_right*x1*x2))),89.11392405063292,0.7776333085879085,True,True
+318,15484,combination_001590,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left*x1*x2) + a2*log(Abs(c1_right*x1)),75.69620253164557,0.7585478971930117,True,True
+319,18188,combination_015634,combination,binary_combination,a1*cos(c1_left/x1) + a2*log(Abs(c1_right*x1*x2)),78.48101265822785,0.7554357529246792,True,True
+320,3552,combination_010569,combination,binary_combination,a1*cos(c1_left*x1*x2) + a2*log(Abs(cos(c1_right*x1))),16.70886075949367,-144.56789589980883,False,True
+321,30740,combination_002598,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left/x1) + a2*log(Abs(c1_right/(x1*x2) + c2_right*x1)),86.07594936708861,0.7743344009530122,True,True
+322,24323,combination_001838,combination,binary_combination,a1*(c1_left*x1/x2 + c2_left*x2) + a2*log(Abs(c1_right*x1)),86.83544303797468,0.772028417688503,False,True
+323,22585,combination_017586,combination,binary_combination,a1*log(Abs(c1_left*x1 + cconst_product_0_left)) + a2*sin(c2_right*x2 + cconst_product_0_right),58.734177215189874,0.6745825103067931,True,True
+324,12908,combination_007530,combination,binary_combination,a1*c1_left*x2 + a2*log(Abs(c2_right/x1 + cconst_product_0_right)),66.07594936708861,0.7254555811629158,True,True
+325,11117,combination_000713,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c2_right*x1*x2 + cconst_product_0_right))),91.13924050632912,0.7811229638727613,True,True
+326,26128,combination_007264,combination,binary_combination,a1*c1_left*x1/x2 + a2*log(Abs(c1_right*x1 + c2_right*x1*x2)),92.40506329113924,0.7765266850231173,True,True
+327,19819,combination_006928,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(sin(c1_right/(x1*x2)))),72.15189873417721,0.6985824342560031,True,True
+328,12155,combination_007566,combination,binary_combination,a1*c1_left*x2 + a2*log(Abs(cos(c1_right/x1))),65.56962025316456,0.7187064160452645,True,True
+329,25167,combination_013015,combination,binary_combination,a1*cos(c1_left*x2) + a2*log(Abs(cos(c1_right*x1*x2))),15.189873417721518,-286.4348894627303,True,True
+330,11682,combination_000699,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c1_right/(x1*x2) + c2_right*x1*x2))),99.74683544303798,0.7982157272398677,False,True
+331,10766,combination_008403,combination,binary_combination,a1*c1_left/x2 + a2*log(Abs(c1_right/x1 + c2_right*x1)),49.11392405063291,0.6882151487373397,True,True
+332,18477,combination_006841,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right/(x1*x2))),63.79746835443038,0.6883560704326622,True,True
+333,9172,combination_007803,combination,binary_combination,a1*c1_left*x2/x1 + a2*log(Abs(sin(c1_right*x1))),23.037974683544302,-23.986946957956388,True,True
+334,12652,combination_000639,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(cos(c1_right*x1*x2 + c2_right/x1))),82.0253164556962,0.7672049834159522,True,True
+335,30816,combination_006847,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right/x2 + c2_right*x1*x2)),72.40506329113924,0.7335205866729327,True,True
+336,5226,combination_007789,combination,binary_combination,a1*c1_left*x2/x1 + a2*log(Abs(cos(c1_right/x1))),55.949367088607595,0.6300562716608855,True,True
+337,26219,combination_007131,combination,binary_combination,a1*c1_left*x1*x2 + a2*log(Abs(sin(c1_right*x1))),21.265822784810126,-45.657460593014335,True,True
+338,18256,combination_018284,combination,binary_combination,a1*log(Abs(c1_left*x1*x2)) + a2*log(Abs(c1_right*x2)),75.44303797468355,0.7538330570791765,True,True
+339,31648,combination_000666,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(cos(c1_right/x2 + c2_right*x1*x2))),85.56962025316456,0.7717164988831792,False,True
+340,3319,combination_008381,combination,binary_combination,a1*c1_left/x2 + a2*log(Abs(c1_right*x1/x2 + c2_right*x1)),52.65822784810127,0.698546573677784,False,True
+341,30340,combination_017429,combination,binary_combination,a1*log(Abs(c1_left*x1 + cconst_product_0_left)) + a2*log(Abs(c1_right*x2)),74.68354430379746,0.752166567937217,False,True
+342,14646,combination_029211,combination,binary_combination,a1*log(Abs(sin(c1_left*x1))) + a2*sin(c1_right*x2),17.72151898734177,-43.8689114110685,True,True
+343,2007,combination_007062,combination,binary_combination,a1*c1_left*x1*x2 + a2*log(Abs(c1_right*x2/x1)),31.89873417721519,0.09137342908879875,True,True
+344,15956,combination_000712,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c2_right*x1 + cconst_product_0_right))),99.24050632911393,0.7984635594034347,True,True
+345,26027,combination_005901,combination,binary_combination,a1*(c1_left/x1 + c2_left/x2) + a2*log(Abs(c1_right*x1)),70.88607594936708,0.7466567797010638,True,True
+346,32105,combination_007342,combination,binary_combination,a1*c1_left*x1/x2 + a2*log(Abs(cos(c1_right/x1))),95.18987341772151,0.7893792958688088,True,True
+347,4648,combination_024864,combination,binary_combination,a1*log(Abs(cos(c1_left*x1))) + a2*sin(c1_right*x2),22.27848101265823,-40.08374531820372,False,True
+348,1117,combination_007356,combination,binary_combination,a1*c1_left*x1/x2 + a2*log(Abs(sin(c1_right*x1))),21.518987341772153,-21.92248401835831,False,True
+349,7577,combination_000689,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c1_right*x2 + c2_right*x1*x2))),51.64556962025316,0.7059671676643748,False,True
+350,12472,combination_003074,combination,binary_combination,a1*(c1_left*x2 + c2_left*x1) + a2*log(Abs(c1_right*x1/x2)),78.22784810126582,0.7584612206117616,True,True
+351,15927,combination_017475,combination,binary_combination,a1*log(Abs(c1_left*x1 + cconst_product_0_left)) + a2*log(Abs(cos(c1_right*x2))),38.734177215189874,0.22709853355799758,True,True
+352,12752,combination_013011,combination,binary_combination,a1*cos(c1_left*x2) + a2*log(Abs(cos(c1_right*x1))),20.0,-106.78005879814157,True,True
+353,11738,combination_000674,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c1_right*x1 + c2_right*x1*x2))),83.54430379746836,0.774423432500767,True,True
+354,29273,combination_000171,combination,binary_combination,a1*(c1_left*x1 + c2_left*x1/x2) + a2*log(Abs(sin(c1_right*x1))),69.62025316455696,0.7514261832161049,True,True
+355,30699,combination_017419,combination,binary_combination,a1*log(Abs(c1_left*x1 + cconst_product_0_left)) + a2*log(Abs(c1_right*x1*x2)),65.0632911392405,0.6943067473601126,False,True
+356,30776,combination_019953,combination,binary_combination,a1*log(Abs(c1_left*x2)) + a2*log(Abs(cos(c1_right*x1))),25.31645569620253,-3.1274313656748074,True,True
+357,3427,combination_000700,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c1_right/(x1*x2) + c2_right*x2/x1))),100.0,0.83393561553321,False,True
+358,24750,combination_006817,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(c1_right*x1*x2 + c2_right/x1)),72.9113924050633,0.6971010628399563,True,True
+359,11288,combination_008452,combination,binary_combination,a1*c1_left/x2 + a2*log(Abs(cos(c1_right/x1))),97.46835443037975,0.7937187484298752,True,True
+360,18106,combination_018403,combination,binary_combination,a1*log(Abs(c1_left*x1*x2)) + a2*sin(c1_right*x1),52.91139240506329,0.528141770152762,False,True
+361,23965,combination_007717,combination,binary_combination,a1*c1_left*x2/x1 + a2*log(Abs(c1_right*x1*x2)),31.139240506329113,-0.8526411964420537,True,True
+362,16740,combination_000677,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c1_right*x1 + c2_right/(x1*x2)))),82.27848101265823,0.7728525947660856,True,True
+363,5719,combination_003075,combination,binary_combination,a1*(c1_left*x2 + c2_left*x1) + a2*log(Abs(c1_right*x2 + c2_right*x1)),61.0126582278481,0.7175096428917638,True,True
+364,10176,combination_017519,combination,binary_combination,a1*log(Abs(c1_left*x1 + cconst_product_0_left)) + a2*log(Abs(sin(c1_right*x2))),39.24050632911393,0.27208166788809385,False,True
+365,6493,combination_007493,combination,binary_combination,a1*c1_left*x2 + a2*log(Abs(c1_right*x1*x2 + cconst_product_0_right)),35.44303797468354,-0.027064915230513353,True,True
+366,30765,combination_007122,combination,binary_combination,a1*c1_left*x1*x2 + a2*log(Abs(cos(c2_right*x1 + cconst_product_0_right))),25.569620253164558,-12.624028425020539,True,True
+367,918,combination_000676,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c1_right*x1 + c2_right*x2))),98.73417721518987,0.7967059329082803,True,True
+368,27116,combination_003066,combination,binary_combination,a1*(c1_left*x2 + c2_left*x1) + a2*log(Abs(c1_right*x1*x2 + cconst_product_0_right)),73.16455696202532,0.7479335260729876,True,True
+369,28734,combination_018330,combination,binary_combination,a1*log(Abs(c1_left*x1*x2)) + a2*log(Abs(cos(c1_right*x2))),25.82278481012658,-2.662421635042388,True,True
+370,22687,combination_009679,combination,binary_combination,a1*cos(c1_left*x1) + a2*log(Abs(c1_right*x1*x2)),66.32911392405063,0.740693497621483,False,True
+371,32795,combination_007270,combination,binary_combination,a1*c1_left*x1/x2 + a2*log(Abs(c1_right*x1*x2)),33.41772151898734,0.2362503047764396,True,True
+372,8895,combination_000657,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(cos(c1_right/(x1*x2) + c2_right*x2/x1))),95.9493670886076,0.7934690672430161,False,True
+373,22227,combination_022603,combination,binary_combination,a1*log(Abs(c1_left/x2 + c2_left*x1)) + a2*sin(c1_right*x2),91.39240506329114,0.7807493131354377,True,True
+374,25850,combination_007521,combination,binary_combination,a1*c1_left*x2 + a2*log(Abs(c1_right/x2 + c2_right*x1)),83.0379746835443,0.7732036109766087,True,True
+375,19491,combination_012967,combination,binary_combination,a1*cos(c1_left*x2) + a2*log(Abs(c1_right*x1*x2)),29.11392405063291,-0.8578785984726724,False,True
+376,9679,combination_012993,combination,binary_combination,a1*cos(c1_left*x2) + a2*log(Abs(c1_right/x1)),61.77215189873418,0.7059823550609514,False,True
+377,9472,combination_000655,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(cos(c1_right/(x1*x2) + c2_right*x1/x2))),77.21518987341773,0.764043438710243,True,True
+378,13473,combination_022588,combination,binary_combination,a1*log(Abs(c1_left/x2 + c2_left*x1)) + a2*sin(c1_right*x1),60.50632911392405,0.738381306317724,False,True
+379,6476,combination_007385,combination,binary_combination,a1*c1_left*x1/x2 + a2*log(Abs(sin(c1_right/x1))),91.89873417721519,0.7860515533479298,True,True
+380,24091,combination_018418,combination,binary_combination,a1*log(Abs(c1_left*x1*x2)) + a2*sin(c1_right*x2),27.341772151898734,-1.6818974146347658,True,True
+381,32776,combination_007052,combination,binary_combination,a1*c1_left*x1*x2 + a2*log(Abs(c1_right*x1/x2)),34.68354430379747,0.4446972269981575,False,True
+382,23557,combination_000687,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c1_right*x1/x2 + cconst_product_0_right))),84.0506329113924,0.7704721483520128,True,True
+383,14753,combination_012994,combination,binary_combination,a1*cos(c1_left*x2) + a2*log(Abs(c1_right/x2 + c2_right*x1)),73.92405063291139,0.7610330874549993,False,True
+384,13961,combination_017601,combination,binary_combination,a1*log(Abs(c1_left*x1)) + a2*log(Abs(c1_right*x2 + cconst_product_0_right)),80.25316455696202,0.7356019119842496,True,True
+385,16529,combination_008160,combination,binary_combination,a1*c1_left/x1 + a2*log(Abs(c1_right*x1*x2)),57.21518987341772,0.6838949943817771,True,True
+386,25636,combination_022461,combination,binary_combination,a1*log(Abs(c1_left/x1)) + a2*sin(c1_right*x2),64.81012658227849,0.7215683977819678,True,True
+387,5209,combination_000706,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c1_right/x1 + cconst_product_0_right))),89.62025316455696,0.7826072459077745,True,True
+388,10129,combination_008187,combination,binary_combination,a1*c1_left/x1 + a2*log(Abs(c1_right/x2 + c2_right*x1)),75.9493670886076,0.7615475466552337,True,True
+389,25717,combination_006914,combination,binary_combination,a1*c1_left*x1 + a2*log(Abs(sin(c1_right*x1/x2 + cconst_product_0_right))),41.0126582278481,0.3019830865102504,True,True
+390,31541,combination_009768,combination,binary_combination,a1*cos(c1_left*x1) + a2*log(Abs(sin(c1_right*x1*x2))),32.91139240506329,-1.3739630123048285,True,True
+391,27351,combination_000715,combination,binary_combination,a1*(c1_left*x1 + c2_left/x2) + a2*log(Abs(sin(c2_right*x2/x1 + cconst_product_0_right))),87.0886075949367,0.7795342955198638,True,True
+392,31927,combination_007744,combination,binary_combination,a1*c1_left*x2/x1 + a2*log(Abs(c1_right/x2 + c2_right*x1)),73.41772151898734,0.7538856927626324,True,True
+393,17821,combination_017756,combination,binary_combination,a1*log(Abs(c1_left*x1)) + a2*sin(c1_right/x2 + cconst_product_0_right),78.9873417721519,0.7615846147556633,True,True
+394,14855,combination_013053,combination,binary_combination,a1*cos(c1_left*x2) + a2*log(Abs(sin(c1_right*x1))),44.050632911392405,0.4150389263925698,True,True
+395,32745,combination_008406,combination,binary_combination,a1*c1_left/x2 + a2*log(Abs(c1_right/x1)),97.21518987341773,0.7933323483566841,True,True

@@ -1,0 +1,5190 @@
+{
+  "version": 2,
+  "formula_generation_signature": "64ff393483f366c92d03a329e658c992cddb771e66fad3af8b167d1d2af8fee2",
+  "formula_generation_seed": 1518,
+  "feature_precompute_seed": 1518,
+  "feature_count": 1,
+  "feature_names": [
+    "distance"
+  ],
+  "bases": [
+    {
+      "id": "base_000000",
+      "structure_type": "projected_dimensionless_monomial",
+      "source_arity": 4,
+      "arity": 1,
+      "projection_substitutions": {
+        "x2": 1,
+        "x3": 1,
+        "x4": 1
+      },
+      "exponents": [
+        -1
+      ],
+      "variables": [
+        "x1"
+      ],
+      "sympy_expression": "Pow(Symbol('x1'), Integer(-1))",
+      "readable_expression": "1/x1"
+    },
+    {
+      "id": "base_000001",
+      "structure_type": "projected_dimensionless_monomial",
+      "source_arity": 4,
+      "arity": 1,
+      "projection_substitutions": {
+        "x2": 1,
+        "x3": 1,
+        "x4": 1
+      },
+      "exponents": [
+        1
+      ],
+      "variables": [
+        "x1"
+      ],
+      "sympy_expression": "Symbol('x1')",
+      "readable_expression": "x1"
+    }
+  ],
+  "single_candidates": [
+    {
+      "id": "candidate_000000",
+      "structure_type": "single_candidate",
+      "base_count": 2,
+      "base_ids": [
+        "base_000001",
+        "base_000000"
+      ],
+      "bases": [
+        "x1",
+        "1/x1"
+      ],
+      "operator": "identity",
+      "parameter_symbols": [
+        "a0",
+        "c1",
+        "c2"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), Add(Mul(Symbol('c1'), Symbol('x1')), Mul(Symbol('c2'), Pow(Symbol('x1'), Integer(-1)))))",
+      "readable_expression": "a0*(c1*x1 + c2/x1)"
+    },
+    {
+      "id": "candidate_000001",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000001"
+      ],
+      "bases": [
+        "x1"
+      ],
+      "operator": "identity",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), Symbol('c1'), Symbol('x1'))",
+      "readable_expression": "a0*c1*x1"
+    },
+    {
+      "id": "candidate_000002",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000000"
+      ],
+      "bases": [
+        "1/x1"
+      ],
+      "operator": "identity",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), Symbol('c1'), Pow(Symbol('x1'), Integer(-1)))",
+      "readable_expression": "a0*c1/x1"
+    },
+    {
+      "id": "candidate_000003",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000001"
+      ],
+      "bases": [
+        "x1"
+      ],
+      "operator": "cos",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), cos(Mul(Symbol('c1'), Symbol('x1'))))",
+      "readable_expression": "a0*cos(c1*x1)"
+    },
+    {
+      "id": "candidate_000004",
+      "structure_type": "single_candidate",
+      "base_count": 2,
+      "base_ids": [
+        "base_000000",
+        "base_000001"
+      ],
+      "bases": [
+        "1/x1",
+        "x1"
+      ],
+      "operator": "cos",
+      "parameter_symbols": [
+        "a0",
+        "c1",
+        "c2"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), cos(Add(Mul(Symbol('c1'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2'), Symbol('x1')))))",
+      "readable_expression": "a0*cos(c1/x1 + c2*x1)"
+    },
+    {
+      "id": "candidate_000005",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000000"
+      ],
+      "bases": [
+        "1/x1"
+      ],
+      "operator": "cos",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), cos(Mul(Symbol('c1'), Pow(Symbol('x1'), Integer(-1)))))",
+      "readable_expression": "a0*cos(c1/x1)"
+    },
+    {
+      "id": "candidate_000006",
+      "structure_type": "single_candidate",
+      "base_count": 2,
+      "base_ids": [
+        "base_000001",
+        "base_000000"
+      ],
+      "bases": [
+        "x1",
+        "1/x1"
+      ],
+      "operator": "log_abs",
+      "parameter_symbols": [
+        "a0",
+        "c1",
+        "c2"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), log(Abs(Add(Mul(Symbol('c1'), Symbol('x1')), Mul(Symbol('c2'), Pow(Symbol('x1'), Integer(-1)))))))",
+      "readable_expression": "a0*log(Abs(c1*x1 + c2/x1))"
+    },
+    {
+      "id": "candidate_000007",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000001"
+      ],
+      "bases": [
+        "x1"
+      ],
+      "operator": "log_abs",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), log(Abs(Mul(Symbol('c1'), Symbol('x1')))))",
+      "readable_expression": "a0*log(Abs(c1*x1))"
+    },
+    {
+      "id": "candidate_000008",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000000"
+      ],
+      "bases": [
+        "1/x1"
+      ],
+      "operator": "log_abs",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), log(Abs(Mul(Symbol('c1'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a0*log(Abs(c1/x1))"
+    },
+    {
+      "id": "candidate_000009",
+      "structure_type": "single_candidate",
+      "base_count": 2,
+      "base_ids": [
+        "base_000001",
+        "base_000000"
+      ],
+      "bases": [
+        "x1",
+        "1/x1"
+      ],
+      "operator": "log_abs_cos",
+      "parameter_symbols": [
+        "a0",
+        "c1",
+        "c2"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), log(Abs(cos(Add(Mul(Symbol('c1'), Symbol('x1')), Mul(Symbol('c2'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a0*log(Abs(cos(c1*x1 + c2/x1)))"
+    },
+    {
+      "id": "candidate_000010",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000001"
+      ],
+      "bases": [
+        "x1"
+      ],
+      "operator": "log_abs_cos",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), log(Abs(cos(Mul(Symbol('c1'), Symbol('x1'))))))",
+      "readable_expression": "a0*log(Abs(cos(c1*x1)))"
+    },
+    {
+      "id": "candidate_000011",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000000"
+      ],
+      "bases": [
+        "1/x1"
+      ],
+      "operator": "log_abs_cos",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), log(Abs(cos(Mul(Symbol('c1'), Pow(Symbol('x1'), Integer(-1)))))))",
+      "readable_expression": "a0*log(Abs(cos(c1/x1)))"
+    },
+    {
+      "id": "candidate_000012",
+      "structure_type": "single_candidate",
+      "base_count": 2,
+      "base_ids": [
+        "base_000001",
+        "base_000000"
+      ],
+      "bases": [
+        "x1",
+        "1/x1"
+      ],
+      "operator": "log_abs_sin",
+      "parameter_symbols": [
+        "a0",
+        "c1",
+        "c2"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), log(Abs(sin(Add(Mul(Symbol('c1'), Symbol('x1')), Mul(Symbol('c2'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a0*log(Abs(sin(c1*x1 + c2/x1)))"
+    },
+    {
+      "id": "candidate_000013",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000001"
+      ],
+      "bases": [
+        "x1"
+      ],
+      "operator": "log_abs_sin",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), log(Abs(sin(Mul(Symbol('c1'), Symbol('x1'))))))",
+      "readable_expression": "a0*log(Abs(sin(c1*x1)))"
+    },
+    {
+      "id": "candidate_000014",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000000"
+      ],
+      "bases": [
+        "1/x1"
+      ],
+      "operator": "log_abs_sin",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), log(Abs(sin(Mul(Symbol('c1'), Pow(Symbol('x1'), Integer(-1)))))))",
+      "readable_expression": "a0*log(Abs(sin(c1/x1)))"
+    },
+    {
+      "id": "candidate_000015",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000001"
+      ],
+      "bases": [
+        "x1"
+      ],
+      "operator": "sin",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), sin(Mul(Symbol('c1'), Symbol('x1'))))",
+      "readable_expression": "a0*sin(c1*x1)"
+    },
+    {
+      "id": "candidate_000016",
+      "structure_type": "single_candidate",
+      "base_count": 2,
+      "base_ids": [
+        "base_000000",
+        "base_000001"
+      ],
+      "bases": [
+        "1/x1",
+        "x1"
+      ],
+      "operator": "sin",
+      "parameter_symbols": [
+        "a0",
+        "c1",
+        "c2"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), sin(Add(Mul(Symbol('c1'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2'), Symbol('x1')))))",
+      "readable_expression": "a0*sin(c1/x1 + c2*x1)"
+    },
+    {
+      "id": "candidate_000017",
+      "structure_type": "single_candidate",
+      "base_count": 1,
+      "base_ids": [
+        "base_000000"
+      ],
+      "bases": [
+        "1/x1"
+      ],
+      "operator": "sin",
+      "parameter_symbols": [
+        "a0",
+        "c1"
+      ],
+      "sympy_expression": "Mul(Symbol('a0'), sin(Mul(Symbol('c1'), Pow(Symbol('x1'), Integer(-1)))))",
+      "readable_expression": "a0*sin(c1/x1)"
+    }
+  ],
+  "binary_combinations": [
+    {
+      "id": "combination_000000",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000001"
+      ],
+      "operators": [
+        "identity",
+        "identity"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), Symbol('c1_right'), Symbol('x1')))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*c1_right*x1"
+    },
+    {
+      "id": "combination_000001",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000002"
+      ],
+      "operators": [
+        "identity",
+        "identity"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*c1_right/x1"
+    },
+    {
+      "id": "combination_000002",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000003"
+      ],
+      "operators": [
+        "identity",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), cos(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*cos(c1_right*x1)"
+    },
+    {
+      "id": "combination_000003",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000004"
+      ],
+      "operators": [
+        "identity",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), cos(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*cos(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000004",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000005"
+      ],
+      "operators": [
+        "identity",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*cos(c1_right/x1)"
+    },
+    {
+      "id": "combination_000005",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000006"
+      ],
+      "operators": [
+        "identity",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*log(Abs(c1_right*x1 + c2_right/x1))"
+    },
+    {
+      "id": "combination_000006",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000007"
+      ],
+      "operators": [
+        "identity",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*log(Abs(c1_right*x1))"
+    },
+    {
+      "id": "combination_000007",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000008"
+      ],
+      "operators": [
+        "identity",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1)))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*log(Abs(c1_right/x1))"
+    },
+    {
+      "id": "combination_000008",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000009"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(cos(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*log(Abs(cos(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000009",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000010"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*log(Abs(cos(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000010",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000011"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*log(Abs(cos(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000011",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000012"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000012",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000013"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000013",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000014"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000014",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000015"
+      ],
+      "operators": [
+        "identity",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000015",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000016"
+      ],
+      "operators": [
+        "identity",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000016",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000000",
+        "candidate_000017"
+      ],
+      "operators": [
+        "identity",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*(c1_left*x1 + c2_left/x1) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000017",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000002"
+      ],
+      "operators": [
+        "identity",
+        "identity"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))",
+      "readable_expression": "a1*c1_left*x1 + a2*c1_right/x1"
+    },
+    {
+      "id": "combination_000018",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000003"
+      ],
+      "operators": [
+        "identity",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), cos(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*c1_left*x1 + a2*cos(c1_right*x1)"
+    },
+    {
+      "id": "combination_000019",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000004"
+      ],
+      "operators": [
+        "identity",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), cos(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*cos(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000020",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000005"
+      ],
+      "operators": [
+        "identity",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*cos(c1_right/x1)"
+    },
+    {
+      "id": "combination_000021",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000006"
+      ],
+      "operators": [
+        "identity",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), log(Abs(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*log(Abs(c1_right*x1 + c2_right/x1))"
+    },
+    {
+      "id": "combination_000022",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000007"
+      ],
+      "operators": [
+        "identity",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*log(Abs(c1_right*x1))"
+    },
+    {
+      "id": "combination_000023",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000008"
+      ],
+      "operators": [
+        "identity",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1)))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*log(Abs(c1_right/x1))"
+    },
+    {
+      "id": "combination_000024",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000009"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), log(Abs(cos(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*log(Abs(cos(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000025",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000010"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*log(Abs(cos(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000026",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000011"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*log(Abs(cos(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000027",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000012"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000028",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000013"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000029",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000014"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000030",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000015"
+      ],
+      "operators": [
+        "identity",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*c1_left*x1 + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000031",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000016"
+      ],
+      "operators": [
+        "identity",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000032",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000001",
+        "candidate_000017"
+      ],
+      "operators": [
+        "identity",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Symbol('x1')), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*c1_left*x1 + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000033",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000003"
+      ],
+      "operators": [
+        "identity",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), cos(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*c1_left/x1 + a2*cos(c1_right*x1)"
+    },
+    {
+      "id": "combination_000034",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000004"
+      ],
+      "operators": [
+        "identity",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), cos(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*cos(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000035",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000005"
+      ],
+      "operators": [
+        "identity",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*cos(c1_right/x1)"
+    },
+    {
+      "id": "combination_000036",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000006"
+      ],
+      "operators": [
+        "identity",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), log(Abs(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*log(Abs(c1_right*x1 + c2_right/x1))"
+    },
+    {
+      "id": "combination_000037",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000007"
+      ],
+      "operators": [
+        "identity",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*log(Abs(c1_right*x1))"
+    },
+    {
+      "id": "combination_000038",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000008"
+      ],
+      "operators": [
+        "identity",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1)))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*log(Abs(c1_right/x1))"
+    },
+    {
+      "id": "combination_000039",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000009"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), log(Abs(cos(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*log(Abs(cos(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000040",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000010"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*log(Abs(cos(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000041",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000011"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*log(Abs(cos(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000042",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000012"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000043",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000013"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000044",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000014"
+      ],
+      "operators": [
+        "identity",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000045",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000015"
+      ],
+      "operators": [
+        "identity",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*c1_left/x1 + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000046",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000016"
+      ],
+      "operators": [
+        "identity",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000047",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000002",
+        "candidate_000017"
+      ],
+      "operators": [
+        "identity",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*c1_left/x1 + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000048",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000004"
+      ],
+      "operators": [
+        "cos",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), cos(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*cos(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000049",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000005"
+      ],
+      "operators": [
+        "cos",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*cos(c1_right/x1)"
+    },
+    {
+      "id": "combination_000050",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000006"
+      ],
+      "operators": [
+        "cos",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), log(Abs(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*log(Abs(c1_right*x1 + c2_right/x1))"
+    },
+    {
+      "id": "combination_000051",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000007"
+      ],
+      "operators": [
+        "cos",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*log(Abs(c1_right*x1))"
+    },
+    {
+      "id": "combination_000052",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000008"
+      ],
+      "operators": [
+        "cos",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1)))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*log(Abs(c1_right/x1))"
+    },
+    {
+      "id": "combination_000053",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000009"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), log(Abs(cos(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*log(Abs(cos(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000054",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000010"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*log(Abs(cos(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000055",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000011"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*log(Abs(cos(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000056",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000012"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000057",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000013"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000058",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000014"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000059",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000015"
+      ],
+      "operators": [
+        "cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000060",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000016"
+      ],
+      "operators": [
+        "cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000061",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000003",
+        "candidate_000017"
+      ],
+      "operators": [
+        "cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*cos(c1_left*x1) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000062",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000005"
+      ],
+      "operators": [
+        "cos",
+        "cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*cos(c1_right/x1)"
+    },
+    {
+      "id": "combination_000063",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000006"
+      ],
+      "operators": [
+        "cos",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*log(Abs(c1_right*x1 + c2_right/x1))"
+    },
+    {
+      "id": "combination_000064",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000007"
+      ],
+      "operators": [
+        "cos",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*log(Abs(c1_right*x1))"
+    },
+    {
+      "id": "combination_000065",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000008"
+      ],
+      "operators": [
+        "cos",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1)))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*log(Abs(c1_right/x1))"
+    },
+    {
+      "id": "combination_000066",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000009"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(cos(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*log(Abs(cos(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000067",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000010"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*log(Abs(cos(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000068",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000011"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*log(Abs(cos(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000069",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000012"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000070",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000013"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000071",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000014"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000072",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000015"
+      ],
+      "operators": [
+        "cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000073",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000016"
+      ],
+      "operators": [
+        "cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000074",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000004",
+        "candidate_000017"
+      ],
+      "operators": [
+        "cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*cos(c1_left/x1 + c2_left*x1) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000075",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000006"
+      ],
+      "operators": [
+        "cos",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*log(Abs(c1_right*x1 + c2_right/x1))"
+    },
+    {
+      "id": "combination_000076",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000007"
+      ],
+      "operators": [
+        "cos",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*log(Abs(c1_right*x1))"
+    },
+    {
+      "id": "combination_000077",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000008"
+      ],
+      "operators": [
+        "cos",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1)))))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*log(Abs(c1_right/x1))"
+    },
+    {
+      "id": "combination_000078",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000009"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(cos(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*log(Abs(cos(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000079",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000010"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*log(Abs(cos(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000080",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000011"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*log(Abs(cos(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000081",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000012"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000082",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000013"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000083",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000014"
+      ],
+      "operators": [
+        "cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000084",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000015"
+      ],
+      "operators": [
+        "cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000085",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000016"
+      ],
+      "operators": [
+        "cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000086",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000005",
+        "candidate_000017"
+      ],
+      "operators": [
+        "cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*cos(c1_left/x1) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000087",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000006",
+        "candidate_000007"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1 + c2_left/x1)) + a2*log(Abs(c1_right*x1))"
+    },
+    {
+      "id": "combination_000088",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000006",
+        "candidate_000008"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1)))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1 + c2_left/x1)) + a2*log(Abs(c1_right/x1))"
+    },
+    {
+      "id": "combination_000089",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000006",
+        "candidate_000009"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), log(Abs(cos(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1 + c2_left/x1)) + a2*log(Abs(cos(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000090",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000006",
+        "candidate_000010"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1 + c2_left/x1)) + a2*log(Abs(cos(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000091",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000006",
+        "candidate_000011"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1 + c2_left/x1)) + a2*log(Abs(cos(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000092",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000006",
+        "candidate_000012"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1 + c2_left/x1)) + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000093",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000006",
+        "candidate_000013"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1 + c2_left/x1)) + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000094",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000006",
+        "candidate_000014"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1 + c2_left/x1)) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000095",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000006",
+        "candidate_000015"
+      ],
+      "operators": [
+        "log_abs",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1 + c2_left/x1)) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000096",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000006",
+        "candidate_000016"
+      ],
+      "operators": [
+        "log_abs",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1 + c2_left/x1)) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000097",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000006",
+        "candidate_000017"
+      ],
+      "operators": [
+        "log_abs",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1 + c2_left/x1)) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000098",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000007",
+        "candidate_000008"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1)))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1)) + a2*log(Abs(c1_right/x1))"
+    },
+    {
+      "id": "combination_000099",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000007",
+        "candidate_000009"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(cos(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1)) + a2*log(Abs(cos(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000100",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000007",
+        "candidate_000010"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1)) + a2*log(Abs(cos(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000101",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000007",
+        "candidate_000011"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1)) + a2*log(Abs(cos(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000102",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000007",
+        "candidate_000012"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1)) + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000103",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000007",
+        "candidate_000013"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1)) + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000104",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000007",
+        "candidate_000014"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Symbol('x1'))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1)) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000105",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000007",
+        "candidate_000015"
+      ],
+      "operators": [
+        "log_abs",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Symbol('x1'))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1)) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000106",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000007",
+        "candidate_000016"
+      ],
+      "operators": [
+        "log_abs",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Symbol('x1'))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1)) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000107",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000007",
+        "candidate_000017"
+      ],
+      "operators": [
+        "log_abs",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Symbol('x1'))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*log(Abs(c1_left*x1)) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000108",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000008",
+        "candidate_000009"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1)))))), Mul(Symbol('a2'), log(Abs(cos(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*log(Abs(c1_left/x1)) + a2*log(Abs(cos(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000109",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000008",
+        "candidate_000010"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1)))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*log(Abs(c1_left/x1)) + a2*log(Abs(cos(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000110",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000008",
+        "candidate_000011"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1)))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(c1_left/x1)) + a2*log(Abs(cos(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000111",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000008",
+        "candidate_000012"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1)))))), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*log(Abs(c1_left/x1)) + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000112",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000008",
+        "candidate_000013"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1)))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*log(Abs(c1_left/x1)) + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000113",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000008",
+        "candidate_000014"
+      ],
+      "operators": [
+        "log_abs",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1)))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(c1_left/x1)) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000114",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000008",
+        "candidate_000015"
+      ],
+      "operators": [
+        "log_abs",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1)))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*log(Abs(c1_left/x1)) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000115",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000008",
+        "candidate_000016"
+      ],
+      "operators": [
+        "log_abs",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1)))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*log(Abs(c1_left/x1)) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000116",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000008",
+        "candidate_000017"
+      ],
+      "operators": [
+        "log_abs",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1)))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*log(Abs(c1_left/x1)) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000117",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000009",
+        "candidate_000010"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1 + c2_left/x1))) + a2*log(Abs(cos(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000118",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000009",
+        "candidate_000011"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1 + c2_left/x1))) + a2*log(Abs(cos(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000119",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000009",
+        "candidate_000012"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1 + c2_left/x1))) + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000120",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000009",
+        "candidate_000013"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1 + c2_left/x1))) + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000121",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000009",
+        "candidate_000014"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1 + c2_left/x1))) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000122",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000009",
+        "candidate_000015"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1 + c2_left/x1))) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000123",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000009",
+        "candidate_000016"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1 + c2_left/x1))) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000124",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000009",
+        "candidate_000017"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1 + c2_left/x1))) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000125",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000010",
+        "candidate_000011"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_cos"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Symbol('x1')))))), Mul(Symbol('a2'), log(Abs(cos(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1))) + a2*log(Abs(cos(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000126",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000010",
+        "candidate_000012"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Symbol('x1')))))), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1))) + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000127",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000010",
+        "candidate_000013"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Symbol('x1')))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1))) + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000128",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000010",
+        "candidate_000014"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Symbol('x1')))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1))) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000129",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000010",
+        "candidate_000015"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Symbol('x1')))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1))) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000130",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000010",
+        "candidate_000016"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Symbol('x1')))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1))) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000131",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000010",
+        "candidate_000017"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Symbol('x1')))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left*x1))) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000132",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000011",
+        "candidate_000012"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001",
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), log(Abs(sin(Add(Mul(Symbol('c1_right'), Symbol('x1')), Mul(Symbol('c2_right'), Pow(Symbol('x1'), Integer(-1)))))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left/x1))) + a2*log(Abs(sin(c1_right*x1 + c2_right/x1)))"
+    },
+    {
+      "id": "combination_000133",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000011",
+        "candidate_000013"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left/x1))) + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000134",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000011",
+        "candidate_000014"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left/x1))) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000135",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000011",
+        "candidate_000015"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left/x1))) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000136",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000011",
+        "candidate_000016"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left/x1))) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000137",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000011",
+        "candidate_000017"
+      ],
+      "operators": [
+        "log_abs_cos",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(cos(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*log(Abs(cos(c1_left/x1))) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000138",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000012",
+        "candidate_000013"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Symbol('x1')))))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left*x1 + c2_left/x1))) + a2*log(Abs(sin(c1_right*x1)))"
+    },
+    {
+      "id": "combination_000139",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000012",
+        "candidate_000014"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left*x1 + c2_left/x1))) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000140",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000012",
+        "candidate_000015"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left*x1 + c2_left/x1))) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000141",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000012",
+        "candidate_000016"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left*x1 + c2_left/x1))) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000142",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000012",
+        "candidate_000017"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001",
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Add(Mul(Symbol('c1_left'), Symbol('x1')), Mul(Symbol('c2_left'), Pow(Symbol('x1'), Integer(-1)))))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left*x1 + c2_left/x1))) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000143",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000013",
+        "candidate_000014"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "log_abs_sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Mul(Symbol('c1_left'), Symbol('x1')))))), Mul(Symbol('a2'), log(Abs(sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left*x1))) + a2*log(Abs(sin(c1_right/x1)))"
+    },
+    {
+      "id": "combination_000144",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000013",
+        "candidate_000015"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Mul(Symbol('c1_left'), Symbol('x1')))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left*x1))) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000145",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000013",
+        "candidate_000016"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Mul(Symbol('c1_left'), Symbol('x1')))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left*x1))) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000146",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000013",
+        "candidate_000017"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Mul(Symbol('c1_left'), Symbol('x1')))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left*x1))) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000147",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000014",
+        "candidate_000015"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Symbol('x1')))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left/x1))) + a2*sin(c1_right*x1)"
+    },
+    {
+      "id": "combination_000148",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000014",
+        "candidate_000016"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left/x1))) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000149",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000014",
+        "candidate_000017"
+      ],
+      "operators": [
+        "log_abs_sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), log(Abs(sin(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*log(Abs(sin(c1_left/x1))) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000150",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000015",
+        "candidate_000016"
+      ],
+      "operators": [
+        "sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000",
+          "base_000001"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), sin(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), sin(Add(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_right'), Symbol('x1'))))))",
+      "readable_expression": "a1*sin(c1_left*x1) + a2*sin(c1_right/x1 + c2_right*x1)"
+    },
+    {
+      "id": "combination_000151",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000015",
+        "candidate_000017"
+      ],
+      "operators": [
+        "sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), sin(Mul(Symbol('c1_left'), Symbol('x1')))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*sin(c1_left*x1) + a2*sin(c1_right/x1)"
+    },
+    {
+      "id": "combination_000152",
+      "structure_type": "binary_combination",
+      "combination_type": "add",
+      "combination_term_count": 2,
+      "candidate_ids": [
+        "candidate_000016",
+        "candidate_000017"
+      ],
+      "operators": [
+        "sin",
+        "sin"
+      ],
+      "base_ids": [
+        [
+          "base_000000",
+          "base_000001"
+        ],
+        [
+          "base_000000"
+        ]
+      ],
+      "parameter_symbols": [
+        "a1",
+        "a2",
+        "c1_left",
+        "c1_right",
+        "c2_left"
+      ],
+      "sympy_expression": "Add(Mul(Symbol('a1'), sin(Add(Mul(Symbol('c1_left'), Pow(Symbol('x1'), Integer(-1))), Mul(Symbol('c2_left'), Symbol('x1'))))), Mul(Symbol('a2'), sin(Mul(Symbol('c1_right'), Pow(Symbol('x1'), Integer(-1))))))",
+      "readable_expression": "a1*sin(c1_left/x1 + c2_left*x1) + a2*sin(c1_right/x1)"
+    }
+  ]
+}

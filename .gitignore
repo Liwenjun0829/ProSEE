@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.venv/
+data/raw/
+outputs/
+*.egg-info/
+build/
+dist/
+/data/raw/
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+# Obsolete feature cache
+/artifacts/reference_features/structure_r2_feature_cache_features_only.joblib

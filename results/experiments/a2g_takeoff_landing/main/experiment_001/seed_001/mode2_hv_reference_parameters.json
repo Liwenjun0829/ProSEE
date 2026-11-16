@@ -1,0 +1,39 @@
+{
+  "evaluation": "comparison",
+  "objective_order": [
+    "mean_r2",
+    "r2_std",
+    "complexity"
+  ],
+  "directions": {
+    "mean_r2": "maximize",
+    "r2_std": "minimize",
+    "complexity": "minimize"
+  },
+  "empirical_bounds": {
+    "mean_r2": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "r2_std": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "complexity": {
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "raw_reference": {
+    "mean_r2": 0.0,
+    "r2_std": 1.0,
+    "complexity": 1.0
+  },
+  "normalized_reference": {
+    "mean_r2": 0.0,
+    "r2_std": 0.0,
+    "complexity": 0.0
+  },
+  "zero_span_objectives": [],
+  "normalization_scope": "all_iterations_tree_and_random_pareto_fronts"
+}

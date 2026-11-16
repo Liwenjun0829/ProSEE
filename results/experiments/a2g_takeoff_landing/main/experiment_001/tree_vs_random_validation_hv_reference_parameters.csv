@@ -1,0 +1,4 @@
+﻿evaluation,objective,direction,empirical_lower_bound,empirical_upper_bound,raw_reference,normalized_reference,zero_span_dimension_excluded,normalization_scope
+validation,validation_mean_r2,maximize,0.7102614289348548,0.7935967623108446,0.7102614289348548,0.0,False,mode4_experiment_all_iterations_all_seeds_tree_and_random_methods
+validation,validation_r2_std,minimize,0.03838755722057324,0.1363320055014549,0.1363320055014549,0.0,False,mode4_experiment_all_iterations_all_seeds_tree_and_random_methods
+validation,complexity,minimize,12.0,34.0,34.0,0.0,False,mode4_experiment_all_iterations_all_seeds_tree_and_random_methods

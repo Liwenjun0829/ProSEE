@@ -1,0 +1,56 @@
+{
+  "pysr_baseline": {
+    "enabled": true,
+    "reproducibility_mode": "reproducible",
+    "niterations": 500,
+    "final_validation_r2_window": 0.1,
+    "populations": 20,
+    "population_size": 20,
+    "maxsize": 20,
+    "binary_operators": [
+      "+",
+      "-",
+      "*",
+      "/"
+    ],
+    "unary_operators": [
+      "sin",
+      "cos",
+      "log_abs(x) = log(abs(x))",
+      "log_abs_sin(x) = log(abs(sin(x)))",
+      "log_abs_cos(x) = log(abs(cos(x)))"
+    ],
+    "model_selection": "best",
+    "verbosity": 1,
+    "precision": 64,
+    "optimizer_algorithm": "BFGS",
+    "optimizer_nrestarts": 20,
+    "optimizer_iterations": 8,
+    "optimizer_f_calls_limit": 10000,
+    "process_watchdog_enabled": true,
+    "process_watchdog_grace_seconds": 60,
+    "pysr_iteration_timeout_seconds": 100,
+    "process_watchdog_iteration_timeout_seconds": 160,
+    "process_watchdog_startup_timeout_seconds": 1800,
+    "optimize_probability": 0.14,
+    "should_optimize_constants": true,
+    "constant_refit_gtol": 1e-05,
+    "constant_refit_initialization_range": [
+      -10.0,
+      10.0
+    ],
+    "require_all_features": true,
+    "forbid_nested_nonlinear_operators": true,
+    "forbid_division_by_nonlinear_structure": true,
+    "max_nonconstant_additive_terms": 2,
+    "structural_loss_during_search": true,
+    "structural_loss_penalty": 1e+300,
+    "forbid_bfgs_constants_in_power_exponents": true,
+    "require_log_ancestor_for_x1": true,
+    "require_optimizer_success": false,
+    "shared_template": {
+      "enabled": true,
+      "parameter_count": 4
+    }
+  }
+}

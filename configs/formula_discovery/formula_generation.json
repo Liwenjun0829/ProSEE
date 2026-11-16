@@ -1,0 +1,52 @@
+{
+  "_comment": "公式库与预计算特征的唯一生成配置；主流程参数由 configs/formula_discovery/pipeline.json 管理。",
+  "seed": 1518,
+  "feature_seed": 1518,
+  "include_symbolic_constant_base": true,
+  "bases": {
+    "arities": "auto",
+    "max_abs_exponent": 1,
+    "allow_binary_reciprocals": true
+  },
+  "candidates": {
+    "max_count": 100000,
+    "two_base_ratio": 0.5,
+    "all_single_base_forms": false,
+    "wrappers": [
+      "identity",
+      "log_abs",
+      "sin",
+      "cos",
+      "log_abs_sin",
+      "log_abs_cos"
+    ],
+    "max_sampling_attempts": 100000
+  },
+  "combinations": {
+    "max_count": 100000,
+    "max_terms": 2,
+    "types": ["add"],
+    "max_sampling_attempts": 200000
+  },
+  "features": {
+    "operator_primitive_tree_pca_enabled": true,
+    "include_engineered_structure_numeric": false,
+    "max_nodes": 96,
+    "engineered_max_depth": 12,
+    "response_svd_grid_size": 100,
+    "response_svd_feature_count": 100,
+    "kernel_pca_components": 64,
+    "kernel_pca_fit_samples": 5000,
+    "kernel_pca_transform_batch_size": 1024,
+    "tree_coordinate_operator_count_mode": "ratio",
+    "nearest_ancestor_only": false,
+    "tree_pca_method": "pca",
+    "tree_max_nodes_per_level": null,
+    "pca_tree_features": false,
+    "symbol_operator_stratified": false
+  },
+  "output": {
+    "artifact": "../../../../artifacts/reference_features/precomputed_formula_features.joblib",
+    "realdata_mat_artifact": "../../../../artifacts/reference_features/precomputed_formula_features_realdata_mat.joblib"
+  }
+}

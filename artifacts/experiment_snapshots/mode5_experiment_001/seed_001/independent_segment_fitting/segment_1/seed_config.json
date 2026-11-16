@@ -1,0 +1,225 @@
+{
+  "_comment": "独立无量纲公式构造与两阶段拟合配置；stage 可选 generate/fit/all。",
+  "stage": "all",
+  "minimal_output_artifacts": true,
+  "require_integer_exponents": true,
+  "pysr_baseline": {
+    "enabled": false,
+    "reproducibility_mode": "reproducible",
+    "niterations": 500,
+    "final_validation_r2_window": 0.1,
+    "populations": 20,
+    "population_size": 20,
+    "maxsize": 20,
+    "binary_operators": [
+      "+",
+      "-",
+      "*",
+      "/"
+    ],
+    "unary_operators": [
+      "sin",
+      "cos",
+      "log_abs(x) = log(abs(x))",
+      "log_abs_sin(x) = log(abs(sin(x)))",
+      "log_abs_cos(x) = log(abs(cos(x)))"
+    ],
+    "model_selection": "best",
+    "verbosity": 1,
+    "precision": 64,
+    "optimizer_algorithm": "BFGS",
+    "optimizer_nrestarts": 20,
+    "optimizer_iterations": 8,
+    "optimizer_f_calls_limit": 10000,
+    "process_watchdog_enabled": true,
+    "process_watchdog_grace_seconds": 60,
+    "pysr_iteration_timeout_seconds": 100,
+    "process_watchdog_iteration_timeout_seconds": 160,
+    "process_watchdog_startup_timeout_seconds": 1800,
+    "optimize_probability": 0.14,
+    "should_optimize_constants": true,
+    "constant_refit_gtol": 1e-05,
+    "constant_refit_initialization_range": [
+      -10.0,
+      10.0
+    ],
+    "require_all_features": true,
+    "forbid_nested_nonlinear_operators": true,
+    "forbid_division_by_nonlinear_structure": true,
+    "max_nonconstant_additive_terms": 2,
+    "structural_loss_during_search": true,
+    "structural_loss_penalty": 1e+300,
+    "power_exponent_constraint_note": "启用后，^ 的右子树不能含 PySR/BFGS 可调常数；若需要固定整数幂，请以 square/cube/inv 等无指数常数的算子提供。",
+    "forbid_bfgs_constants_in_power_exponents": true,
+    "require_log_ancestor_for_x1": true,
+    "require_optimizer_success": false,
+    "shared_stage1": {
+      "enabled": false
+    },
+    "shared_stage2": {
+      "enabled": false,
+      "constant_refit_seed": 1560
+    },
+    "shared_template": {
+      "enabled": true,
+      "parameter_count": 4
+    },
+    "reproducible": true,
+    "deterministic": true,
+    "parallelism": "serial",
+    "timeout_in_seconds": null
+  },
+  "seed": 1518,
+  "log_level": "INFO",
+  "postprocessing": {
+    "merge_log_max_r2_drop": 0.01,
+    "log_merge_initial_perturbation": 0.05
+  },
+  "mode5_fit_batch_rounds": 5,
+  "mode5_constant_test_timeout_seconds": 210,
+  "periodic_constant_significance_enabled": true,
+  "data": {
+    "mode": "realdata_mat",
+    "realdata": {
+      "name": "measured_pathloss",
+      "mat_path": "/home/lwj/ProSEE/src/prosee/symbolic/core/artifacts/expri2/mode5_experiment_001/seed_001/independent_segment_fitting/segment_1/segment_data.mat",
+      "feature_key": "distance_meas",
+      "target_key": "pathloss_meas",
+      "feature_name": "distance",
+      "target_name": "path_loss",
+      "holdout": {
+        "enabled": false
+      },
+      "segmentation": {
+        "enabled": false,
+        "strategy": "coarse_gp_fine",
+        "min_segment_samples": 10,
+        "warm_start_perturbation": 0,
+        "candidate_stride": 5,
+        "coarse_split_count": 20,
+        "fine_candidate_stride": 1,
+        "independent_segment_fitting": true,
+        "breakpoint_prior": {
+          "enabled": true,
+          "h_t_m": 25.0,
+          "h_r_m": 4.0,
+          "carrier_frequency_hz": 5800000000.0,
+          "speed_of_light_m_per_s": 299792458.0,
+          "meters_to_data_units": 0.001,
+          "search_half_width": 1.0,
+          "regularization_weight": 1000.0
+        }
+      },
+      "independent_segment_run": true
+    },
+    "csv_path": "standardized_pathloss_dataset_LHS_freq1.csv",
+    "features": [
+      "tx_rx_distance",
+      "tx_height"
+    ],
+    "target": "path_loss",
+    "csv_files": [
+      {
+        "name": "cruise",
+        "csv_path": "standardized_pathloss_dataset_measured_0123_cruise.csv"
+      }
+    ],
+    "split": {
+      "seed": 1518,
+      "train_fraction": 0.5,
+      "validation_fraction": 0.25,
+      "test_fraction": 0.25
+    }
+  },
+  "fitting": {
+    "single_sample_count": 20,
+    "combination_sample_count": 60,
+    "fit_mode": "refit",
+    "optimizer": "LM",
+    "lm_initializations": 20,
+    "max_nfev": 5000,
+    "log_merge_lm_initializations": 20,
+    "zero_constant_lm_initializations": 20,
+    "zero_constant_initial_perturbation": 0.05,
+    "patience": 20,
+    "initialization_range": [
+      -10.0,
+      10.0
+    ],
+    "minimum_valid_fraction": 0.9,
+    "complex_tolerance": 1e-12,
+    "max_abs_value": 1e+150,
+    "share_constants_across_datasets": false,
+    "joint_r2_aggregation": "minimum",
+    "invalid_residual_penalty": 1000000.0
+  },
+  "ranking": {
+    "enabled": true,
+    "ablation_enabled": false,
+    "model_type": "extra_trees",
+    "feature_mode": "operator_primitive_matrix",
+    "operator_primitive_tree_pca_enabled": true,
+    "shap_interaction_enabled": false,
+    "response_svd_grid_size": 100,
+    "response_svd_feature_count": 100,
+    "tree_coordinate_operator_count_mode": "ratio",
+    "nearest_ancestor_only": false,
+    "tree_training_dynamic_enabled": false,
+    "tree_training_r2_threshold": 0.4,
+    "tree_training_high_r2_target": 20,
+    "tree_training_low_r2_keep_ratio": 0.25,
+    "tree_training_selection_seed": 66,
+    "tree_feature_selection_trials": 200,
+    "kernel_pca_fit_samples": 5000,
+    "kernel_pca_transform_batch_size": 1024,
+    "tree_feature_ratio_range": [
+      0.1,
+      1.0
+    ],
+    "max_nodes": 96,
+    "tree_max_nodes_per_level": null,
+    "engineered_max_depth": 12,
+    "minimum_training_samples": 20,
+    "max_training_samples": 5,
+    "selection_mode": "actual_fit_training_plus_tree_unseen",
+    "direct_fit_top_k": 5,
+    "validation_fraction": 0.2,
+    "validation_top_k": 10,
+    "tree_feature_selection_population_size": 5,
+    "tree_feature_selection_generations": null,
+    "tree_feature_selection_mutation_rate": 0.1,
+    "tree_feature_selection_crossover_rate": 0.8,
+    "feature_correlation": {
+      "enabled": false,
+      "sample_size": 300
+    },
+    "refit_top_k": 15,
+    "refit_lm_initializations": 20,
+    "r2_floor": -2,
+    "n_estimators": 500,
+    "max_depth": null,
+    "min_samples_leaf": 2,
+    "max_features": 1.0,
+    "n_jobs": 24,
+    "learning_rate": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 1.0
+  },
+  "output": {
+    "directory": "/home/lwj/ProSEE/src/prosee/symbolic/core/artifacts/expri2/mode5_experiment_001/seed_001/independent_segment_fitting/segment_1"
+  },
+  "pysr_cache": {
+    "reuse": false,
+    "save": true,
+    "directory": "/home/lwj/ProSEE/src/prosee/symbolic/core/artifacts/expri2/mode5_experiment_001/seed_001/independent_segment_fitting/segment_1/pysr_cache"
+  },
+  "suppress_results_json": true,
+  "mode2": {
+    "max_iterations": 40
+  },
+  "mode34_disable_early_stopping": true,
+  "mode5_retrain_interval": 5,
+  "periodic_constant_significance_interval": 1,
+  "periodic_constant_significance_experiment_mode": 5
+}

@@ -1,0 +1,39 @@
+{
+  "evaluation": "test",
+  "objective_order": [
+    "test_mean_r2",
+    "test_r2_std",
+    "complexity"
+  ],
+  "directions": {
+    "test_mean_r2": "maximize",
+    "test_r2_std": "minimize",
+    "complexity": "minimize"
+  },
+  "empirical_bounds": {
+    "test_mean_r2": {
+      "min": 0.6170428363575255,
+      "max": 0.7620974744372471
+    },
+    "test_r2_std": {
+      "min": 0.10070180558126007,
+      "max": 0.2673653250297662
+    },
+    "complexity": {
+      "min": 12.0,
+      "max": 34.0
+    }
+  },
+  "raw_reference": {
+    "test_mean_r2": 0.6170428363575255,
+    "test_r2_std": 0.2673653250297662,
+    "complexity": 34.0
+  },
+  "normalized_reference": {
+    "test_mean_r2": 0.0,
+    "test_r2_std": 0.0,
+    "complexity": 0.0
+  },
+  "zero_span_objectives": [],
+  "normalization_scope": "mode4_experiment_all_iterations_all_seeds_tree_and_random_methods"
+}

@@ -1,0 +1,595 @@
+{
+  "per_iteration": [
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 0,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 1,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 2,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 3,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 4,
+      "validation_hypervolume": 0.6221388020209456,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 5,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 6,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 7,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 8,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 9,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 10,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 11,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 12,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 13,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 14,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 15,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 16,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 17,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 18,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 19,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 20,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 21,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 22,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 23,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 24,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 25,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 26,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 27,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 28,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 29,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 30,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 31,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 32,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 33,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 34,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 35,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 36,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 37,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 38,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 39,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "tree_model",
+      "seed": "seed_001",
+      "iteration": 40,
+      "validation_hypervolume": 0.6322904303981446,
+      "validation_pareto_front_size": 8
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 0,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 1,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 2,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 3,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 4,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 5,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 6,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 7,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 8,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 9,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 10,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 11,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 12,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 13,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 14,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 15,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 16,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 17,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 18,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 19,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 20,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 21,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 22,
+      "validation_hypervolume": 0.6139669202402059,
+      "validation_pareto_front_size": 5
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 23,
+      "validation_hypervolume": 0.6140452693334407,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 24,
+      "validation_hypervolume": 0.6140452693334407,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 25,
+      "validation_hypervolume": 0.6140452693334407,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 26,
+      "validation_hypervolume": 0.6140452693334407,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 27,
+      "validation_hypervolume": 0.6140452693334407,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 28,
+      "validation_hypervolume": 0.6140452693334407,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 29,
+      "validation_hypervolume": 0.6140452693334407,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 30,
+      "validation_hypervolume": 0.6140452693334407,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 31,
+      "validation_hypervolume": 0.6140452693334407,
+      "validation_pareto_front_size": 6
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 32,
+      "validation_hypervolume": 0.6157620737126556,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 33,
+      "validation_hypervolume": 0.6157620737126556,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 34,
+      "validation_hypervolume": 0.6157620737126556,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 35,
+      "validation_hypervolume": 0.6157620737126556,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 36,
+      "validation_hypervolume": 0.6157620737126556,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 37,
+      "validation_hypervolume": 0.6157620737126556,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 38,
+      "validation_hypervolume": 0.6157620737126556,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 39,
+      "validation_hypervolume": 0.6157620737126556,
+      "validation_pareto_front_size": 7
+    },
+    {
+      "method": "random_permutation",
+      "seed": "seed_001",
+      "iteration": 40,
+      "validation_hypervolume": 0.6157620737126556,
+      "validation_pareto_front_size": 7
+    }
+  ],
+  "pysr_included": false,
+  "pysr_curve_type": null,
+  "normalization_bounds": {
+    "validation_mean_r2": {
+      "min": 0.7102614289348548,
+      "max": 0.7935967623108446
+    },
+    "validation_r2_std": {
+      "min": 0.03838755722057324,
+      "max": 0.1363320055014549
+    },
+    "complexity": {
+      "min": 12.0,
+      "max": 34.0
+    }
+  },
+  "normalization_scope": "mode4_experiment_all_iterations_all_seeds_tree_and_random_methods"
+}

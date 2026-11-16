@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prosee"
+version = "0.1.0"
+description = "Reproducible symbolic-regression workflows for propagation studies"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy",
+  "scipy",
+  "sympy",
+]
+
+[project.optional-dependencies]
+ranking = ["joblib", "scikit-learn", "xgboost"]
+plotting = ["matplotlib", "tqdm"]
+testing = ["pytest"]
+
+[project.scripts]
+prosee-symbolic = "prosee.symbolic.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src/prosee/symbolic/core", "src"]
