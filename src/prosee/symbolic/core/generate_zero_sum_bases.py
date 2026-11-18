@@ -36,7 +36,6 @@ def generate_exponent_vectors(
 def project_four_variable_exponents(
     num_variables: int,
     max_abs: int = 1,
-    allow_binary_reciprocals: bool = True,
 ) -> list[tuple[int, ...]]:
     """Project the 4-D pool by setting trailing variables to one and deduplicate.
 
@@ -52,16 +51,6 @@ def project_four_variable_exponents(
         for alpha in source
         if any(alpha[:num_variables])
     }
-    if num_variables == 2 and not allow_binary_reciprocals:
-        # Remove pure inverse powers of one variable. Ratios such as x1/x2
-        # remain valid because both retained exponents are non-zero.
-        projected = {
-            alpha for alpha in projected
-            if not (
-                (alpha[0] < 0 and alpha[1] == 0)
-                or (alpha[1] < 0 and alpha[0] == 0)
-            )
-        }
     return sorted(projected)
 
 
@@ -82,13 +71,12 @@ def generate_zero_sum_bases(
     num_variables: int,
     max_abs: int = 1,
     variable_names: Sequence[str] | None = None,
-    allow_binary_reciprocals: bool = True,
 ) -> list[sp.Expr]:
     """Generate one arity by projecting and deduplicating the 4-D pool."""
     return [
         exponent_vector_to_expr(alpha, variable_names)
         for alpha in project_four_variable_exponents(
-            num_variables, max_abs, allow_binary_reciprocals
+            num_variables, max_abs
         )
     ]
 
@@ -116,7 +104,6 @@ def generate_and_save_all(
     max_variables: int = 4,
     max_abs: int = 1,
     variable_start_index: int = 0,
-    allow_binary_reciprocals: bool = True,
 ) -> dict[int, list[sp.Expr]]:
     """Generate all requested arities with legacy filenames/x0 indexing."""
     if not 1 <= max_variables <= 4:
@@ -126,7 +113,7 @@ def generate_and_save_all(
     for arity in range(1, max_variables + 1):
         names = [f"x{i + variable_start_index}" for i in range(arity)]
         vectors = project_four_variable_exponents(
-            arity, max_abs, allow_binary_reciprocals
+            arity, max_abs
         )
         expressions = [exponent_vector_to_expr(alpha, names) for alpha in vectors]
         generated[arity] = expressions
@@ -146,11 +133,6 @@ def main() -> None:
     parser.add_argument(
         "--variable-start-index", type=int, default=0,
         help="Starting variable index in text output; default 0 is compatible with the original script",
-    )
-    parser.add_argument(
-        "--disable-binary-reciprocals",
-        action="store_true",
-        help="Exclude 1/x1 and 1/x2 when generating binary bases; ratios such as x1/x2 are retained",
     )
     args = parser.parse_args()
     generate_and_save_all(

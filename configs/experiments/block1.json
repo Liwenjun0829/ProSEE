@@ -30,7 +30,6 @@
     "complex_tolerance": 1e-12,
     "max_abs_value": 1e+150,
     "share_constants_across_datasets": false,
-    "joint_r2_aggregation": "minimum",
     "invalid_residual_penalty": 1000000.0
   },
   "ranking": {
@@ -38,7 +37,6 @@
     "ablation_enabled": false,
     "model_type": "extra_trees",
     "minimum_training_samples": 20,
-    "direct_fit_top_k": 5,
     "validation_fraction": 0.2,
     "validation_top_k": 10,
     "feature_correlation": {
@@ -47,7 +45,6 @@
     },
     "refit_top_k": 15,
     "refit_lm_initializations": 20,
-    "r2_floor": -2,
     "n_estimators": 500,
     "max_depth": null,
     "min_samples_leaf": 2,

@@ -63,6 +63,14 @@ The run script adds the local `src/` directory to Python's import path, so no
 machine-specific `PYTHONPATH` setting is needed. The package also exposes
 `prosee-symbolic` after installation.
 
+To regenerate the frozen formula and feature packages, use the matching
+script for the formula arity:
+
+```bash
+python scripts/precompute_formula_features_bivariate.py
+python scripts/precompute_formula_features_univariate.py
+```
+
 ## Reproducing archived research runs
 
 The dataset-specific entry points are in `scripts/`: `run_a2g_takeoff_landing.py` runs the

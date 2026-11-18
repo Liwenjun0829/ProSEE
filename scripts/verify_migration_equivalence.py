@@ -50,7 +50,7 @@ REFERENCE_IMPORT_UPDATES = {
         (b"from lightweight_formula_gp import (", b"from pareto_formula_evolution import ("),
         (b"from canonicalize_mode5_main_model import main as run_canonicalize",
          b"from canonicalize_repeated_structures import main as run_canonicalize"),
-        (b"precompute_dimensionless_formula_features.py", b"precompute_formula_features.py"),
+        (b"precompute_dimensionless_formula_features.py", b"precompute_formula_features_bivariate.py"),
         (b"dimensionless_formula_generation_config.json", b"formula_generation.json"),
     ),
     "generate_zero_sum_bases.py": (
@@ -88,7 +88,7 @@ REFERENCE_IMPORT_UPDATES = {
         (b"Dimensionless base IDs", b"Formula base IDs"),
         (b"not generated from dimensionless primitives", b"not generated from formula primitives"),
         (b"undefined dimensionless base", b"undefined formula base"),
-        (b'precompute_dimensionless_formula_features.py', b'precompute_formula_features.py'),
+        (b'precompute_dimensionless_formula_features.py', b'precompute_formula_features_bivariate.py'),
         (b'from scipy.stats import rankdata, spearmanr\n',
          b'from scipy.stats import rankdata, spearmanr\n\nPROJECT_ROOT = next(\n    parent for parent in Path(__file__).resolve().parents\n    if (parent / "pyproject.toml").is_file()\n)\n'),
         (b'feature_cache_path = (Path(__file__).resolve().parent\n                          / "structure_r2_feature_cache_features_only.joblib")',

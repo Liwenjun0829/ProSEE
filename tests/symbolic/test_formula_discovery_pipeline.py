@@ -338,7 +338,7 @@ def test_constant_zeroing_does_not_fit_unary_mode2_csv_candidate():
     )
 
 
-def test_hybrid_top_k_uses_actual_fit_for_training_and_tree_only_for_unseen():
+def test_refit_top_k_uses_predicted_rank_for_all_formulas():
     ranking = [
         {
             "formula_id": f"f{index}",
@@ -349,11 +349,8 @@ def test_hybrid_top_k_uses_actual_fit_for_training_and_tree_only_for_unseen():
         }
         for index in range(8)
     ]
-    selected = _select_tree_top_k_for_refit(
-        ranking, 4, ranking_config={"direct_fit_top_k": 2},
-    )
-    assert [row["formula_id"] for row in selected] == ["f1", "f3", "f6", "f7"]
-    assert sum(row["is_training_formula"] for row in selected) == 2
+    selected = _select_tree_top_k_for_refit(ranking, 4, ranking_config={})
+    assert [row["formula_id"] for row in selected] == ["f0", "f1", "f2", "f3"]
 
 
 def test_gp_stratified_selection_covers_each_available_operator():
@@ -789,28 +786,34 @@ def test_lower_arity_bases_project_four_variable_pool_and_deduplicate():
     assert any(sum(alpha) != 0 for alpha in projected)
 
 
-def test_binary_reciprocal_switch_removes_only_pure_reciprocals():
-    projected = project_four_variable_exponents(
-        2, max_abs=2, allow_binary_reciprocals=False
-    )
-    assert (-1, 0) not in projected
-    assert (0, -1) not in projected
-    assert (-2, 0) not in projected
-    assert (0, -2) not in projected
+def test_binary_bases_include_pure_reciprocals_and_ratios():
+    projected = project_four_variable_exponents(2, max_abs=2)
+    assert (-1, 0) in projected
+    assert (0, -1) in projected
+    assert (-2, 0) in projected
+    assert (0, -2) in projected
     assert (-1, 1) in projected
     assert (1, -1) in projected
-    assert project_four_variable_exponents(3, max_abs=1,
-                                           allow_binary_reciprocals=False)
 
 
 def test_candidates_and_combinations_have_independent_parameters():
     config = small_config()
-    bases = build_base_records(config, feature_count=2)
+    bases = build_base_records(config, arity=2)
     candidates = build_candidate_records(bases, config, random.Random(4))
     combinations = build_combination_records(candidates, config, random.Random(5))
+    repeated_bases = build_base_records(config, arity=2)
+    repeated_candidates = build_candidate_records(
+        repeated_bases, config, random.Random(4)
+    )
+    repeated_combinations = build_combination_records(
+        repeated_candidates, config, random.Random(5)
+    )
 
     assert candidates
     assert combinations
+    assert bases == repeated_bases
+    assert candidates == repeated_candidates
+    assert combinations == repeated_combinations
     for candidate in candidates:
         assert candidate["parameter_symbols"]
         assert len(candidate["parameter_symbols"]) == candidate["base_count"]
@@ -851,7 +854,7 @@ def test_combinations_support_configurable_term_count():
     config = small_config()
     config["combinations"]["max_count"] = 40
     config["combinations"]["max_terms"] = 3
-    bases = build_base_records(config, feature_count=2)
+    bases = build_base_records(config, arity=2)
     candidates = build_candidate_records(bases, config, random.Random(14))
     combinations = build_combination_records(candidates, config, random.Random(15))
 
@@ -1138,7 +1141,7 @@ def test_joint_structure_uses_independent_parameters_and_minimum_dataset_r2():
     cfg = {
         "lm_initializations": 3, "max_nfev": 100,
         "initialization_range": [-2, 2], "minimum_valid_fraction": 1.0,
-        "max_abs_value": 1e100, "joint_r2_aggregation": "minimum",
+        "max_abs_value": 1e100,
         "joint_residual_weighting": "equal_dataset",
     }
     _, best = fit_formula_per_dataset(
@@ -1152,7 +1155,11 @@ def test_joint_structure_uses_independent_parameters_and_minimum_dataset_r2():
                           best["parameters_by_dataset"]["f2"][0])
     assert len(best["dataset_metrics"]) == 2
     assert best["r2"] == min(row["r2"] for row in best["dataset_metrics"])
-    assert best["joint_r2_aggregation"] == "minimum"
+    assert best["joint_r2_minimum"] == best["r2"]
+    assert best["joint_r2_mean"] == pytest.approx(
+        np.mean([row["r2"] for row in best["dataset_metrics"]])
+    )
+    assert best["joint_r2_pooled"] == best["pooled_r2"]
 
 
 def test_top_ranked_formula_is_refitted_on_every_dataset():
@@ -1172,7 +1179,7 @@ def test_top_ranked_formula_is_refitted_on_every_dataset():
     }]
     fitting = {"lm_initializations": 2, "max_nfev": 100,
                "initialization_range": [-1, 1], "minimum_valid_fraction": 1.0,
-               "max_abs_value": 1e100, "joint_r2_aggregation": "minimum"}
+               "max_abs_value": 1e100}
 
     results = refit_top_ranked_formulas(
         ranking, [candidate], [], X, y, fitting, {"refit_top_k": 1},
@@ -1271,7 +1278,7 @@ def test_piecewise_fit_enumerates_split_and_selects_lowest_total_loss():
     record = {"id": "piecewise", "readable_expression": "c1*x1"}
     fitting = {"lm_initializations": 2, "max_nfev": 100,
                "initialization_range": [-1, 1], "minimum_valid_fraction": 1.0,
-               "max_abs_value": 1e100, "joint_r2_aggregation": "pooled"}
+               "max_abs_value": 1e100, "_joint_r2_primary": "pooled"}
 
     attempts, best = fit_piecewise_formula(
         record, X, y, fitting, np.random.default_rng(11),
@@ -1340,7 +1347,7 @@ def test_pipeline_trains_realdata_mat_with_piecewise_results(tmp_path):
                                  "formula_pair_search": True,
                              "segment_formula_top_k": 2, "top_pair_results": 2},
         }},
-        "bases": {"arities": "auto", "max_abs_exponent": 1},
+        "bases": {"arities": [1], "max_abs_exponent": 1},
         "candidates": {"max_count": 2, "two_base_ratio": 0,
                         "wrappers": ["identity"], "max_sampling_attempts": 50},
         "combinations": {"max_count": 1, "types": ["add"], "max_sampling_attempts": 50},
@@ -1378,7 +1385,7 @@ def test_mat_coarse_gp_fine_strategy_ranks_global_formulas_then_coarse_refits(tm
                              "min_segment_samples": 5, "coarse_split_count": 3,
                              "fine_candidate_stride": 1},
         }},
-        "bases": {"arities": "auto", "max_abs_exponent": 1},
+        "bases": {"arities": [1], "max_abs_exponent": 1},
         "candidates": {"max_count": 2, "two_base_ratio": 0,
                         "wrappers": ["identity"], "max_sampling_attempts": 50},
         "combinations": {"max_count": 1, "types": ["add"], "max_sampling_attempts": 50},

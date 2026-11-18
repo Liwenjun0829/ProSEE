@@ -1058,8 +1058,7 @@ def _training_percentile_examples(payload: dict, label_field: str = "r2") -> lis
     ]
 
 
-def _training_labels(payload: dict, r2_floor: float | None = None,
-                     label_field: str = "r2") -> dict[str, float]:
+def _training_labels(payload: dict, label_field: str = "r2") -> dict[str, float]:
     grouped: dict[str, list[float]] = {}
     for formula_id, percentile in _training_percentile_examples(payload, label_field):
         grouped.setdefault(formula_id, []).append(percentile)
@@ -1068,7 +1067,7 @@ def _training_labels(payload: dict, r2_floor: float | None = None,
     return {formula_id: min(values) for formula_id, values in grouped.items()}
 
 
-def _training_examples(payload: dict, r2_floor: float,
+def _training_examples(payload: dict,
                        label_field: str = "r2") -> list[tuple[str, float]]:
     return _training_percentile_examples(payload, label_field)
 
@@ -1565,7 +1564,7 @@ def load_precomputed_feature_artifact(
     if not artifact_path.is_file():
         raise FileNotFoundError(
             "Precomputed formula/feature artifact does not exist; run "
-            f"precompute_formula_features.py：{artifact_path}"
+            f"precompute_formula_features_bivariate.py：{artifact_path}"
         )
     try:
         artifact = joblib.load(artifact_path)
@@ -1998,15 +1997,14 @@ def train_and_rank(payload: dict, config: dict, seed: int, output_dir: Path) -> 
         )
     pool = original_pool
     allowed_ids = {str(row["formula_id"]) for row in pool}
-    r2_floor = float(config.get("r2_floor", -5.0))
     label_field = str(config.get("training_label_field", "r2"))
     labels = {
         formula_id: value for formula_id, value in
-        _training_labels(payload, r2_floor, label_field).items()
+        _training_labels(payload, label_field).items()
         if str(formula_id) in allowed_ids
     }
     examples = [
-        item for item in _training_examples(payload, r2_floor, label_field)
+        item for item in _training_examples(payload, label_field)
         if str(item[0]) in allowed_ids
     ]
     actual_r2 = {

@@ -1,0 +1,152 @@
+{
+  "experiment": "mode5_1seed_experiment",
+  "seed_count": 1,
+  "seeds": [
+    1518
+  ],
+  "experiment_directory": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002",
+  "seed_directories": [
+    "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/seed_001"
+  ],
+  "seed_summary_csv": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/summary/mode5_seed_summary.csv",
+  "pareto_fronts_csv": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/summary/mode5_pareto_fronts.csv",
+  "per_seed": [
+    {
+      "seed": 1518,
+      "output_directory": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/seed_001",
+      "pareto_front_size": 0,
+      "run_completed": false,
+      "status": "failed",
+      "error": "Structure ranking requires scikit-learn/joblib; use the project's py39 environment"
+    }
+  ],
+  "aggregate": {
+    "best_mean_r2": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "max": null,
+      "ci95_half_width": null
+    },
+    "best_validation_mean_r2": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "max": null,
+      "ci95_half_width": null
+    },
+    "pysr_best_validation_mean_r2": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "max": null,
+      "ci95_half_width": null
+    },
+    "pysr_best_test_mean_r2": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "max": null,
+      "ci95_half_width": null
+    },
+    "minimum_complexity": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "max": null,
+      "ci95_half_width": null
+    },
+    "final_hypervolume": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "max": null,
+      "ci95_half_width": null
+    },
+    "pareto_front_size": {
+      "count": 1,
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "ci95_half_width": 0.0
+    },
+    "iterations": {
+      "count": 0,
+      "mean": null,
+      "std": null,
+      "min": null,
+      "max": null,
+      "ci95_half_width": null
+    }
+  },
+  "tree_random_hypervolume": {
+    "enabled": false,
+    "pysr_visual_comparison_enabled": false,
+    "pysr_visualization_type": null,
+    "evaluation_label": "validation",
+    "source_seed_count": 0,
+    "source_comparison_files": [],
+    "normalization_scope": "mode4_experiment_all_iterations_all_seeds_tree_and_random_methods",
+    "normalization_bounds": {},
+    "zero_span_objectives": [],
+    "hv_reference_parameters": {
+      "evaluation": "validation",
+      "objective_order": [
+        "validation_mean_r2",
+        "validation_r2_std",
+        "complexity"
+      ],
+      "directions": {},
+      "empirical_bounds": {},
+      "raw_reference": {},
+      "normalized_reference": {},
+      "zero_span_objectives": [],
+      "normalization_scope": "mode4_experiment_all_iterations_all_seeds_tree_and_random_methods",
+      "json_file": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/summary/tree_vs_random_validation_hv_reference_parameters.json",
+      "csv_file": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/summary/tree_vs_random_validation_hv_reference_parameters.csv"
+    },
+    "csv": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/summary/hypervolume/tree_vs_random_validation_hypervolume_by_iteration.csv",
+    "plot": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/summary/hypervolume/tree_vs_random_validation_hypervolume_by_iteration.png"
+  },
+  "tree_random_test_hypervolume": {
+    "enabled": false,
+    "pysr_visual_comparison_enabled": false,
+    "pysr_visualization_type": null,
+    "evaluation_label": "test",
+    "source_seed_count": 0,
+    "source_comparison_files": [],
+    "normalization_scope": "mode4_experiment_all_iterations_all_seeds_tree_and_random_methods",
+    "normalization_bounds": {},
+    "zero_span_objectives": [],
+    "hv_reference_parameters": {
+      "evaluation": "test",
+      "objective_order": [
+        "test_mean_r2",
+        "test_r2_std",
+        "complexity"
+      ],
+      "directions": {},
+      "empirical_bounds": {},
+      "raw_reference": {},
+      "normalized_reference": {},
+      "zero_span_objectives": [],
+      "normalization_scope": "mode4_experiment_all_iterations_all_seeds_tree_and_random_methods",
+      "json_file": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/summary/tree_vs_random_test_hv_reference_parameters.json",
+      "csv_file": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/summary/tree_vs_random_test_hv_reference_parameters.csv"
+    },
+    "csv": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/summary/hypervolume/tree_vs_random_test_hypervolume_by_iteration.csv",
+    "plot": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/summary/hypervolume/tree_vs_random_test_hypervolume_by_iteration.png"
+  },
+  "canonicalized_results": {
+    "skipped": true,
+    "reason": "no main-model test Pareto fronts were produced"
+  },
+  "summary_json": "/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/summary/mode5_experiment_summary.json"
+}

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Generate the frozen one-variable formula library for ``realdata_mat``.
+"""Generate the frozen formula library and feature matrix for the pipeline.
 
-This deliberately mirrors ``precompute_formula_features.py``.
-The only workflow-specific contract is that the loaded data must have exactly
-one feature and the default output is the dedicated MAT artifact.
+This is the only command that is allowed to generate the formula pool or fit
+the formula-feature encoders.  ``formula_discovery_pipeline.py`` loads the
+resulting Joblib package and exits if it is absent or incompatible.
 """
 from __future__ import annotations
 
@@ -26,6 +26,7 @@ from formula_discovery_pipeline import (
     formula_generation_signature,
 )
 from structure_r2_ranker import build_precomputed_feature_artifact
+from data_io import resolve_path
 
 def _load_generation_config(generation_config_path: Path) -> tuple[dict, dict]:
     """Load all formula-pool and precomputed-feature settings from one file."""
@@ -40,18 +41,13 @@ def _load_generation_config(generation_config_path: Path) -> tuple[dict, dict]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="预生成并冻结 realdata_mat 的一元公式库、公式特征和特征编码器"
+        description="预生成并冻结公式库、公式特征和特征编码器"
     )
-    parser.add_argument(
-        "--generation-config", type=Path,
-        default=PROJECT_ROOT / "configs" / "formula_discovery" / "formula_generation.json",
-        help="独立的公式库/特征生成配置",
-    )
-    parser.add_argument(
-        "--output", type=Path,
-        default=None,
-        help="Joblib 输出路径；默认读取 generation 配置",
-    )
+    parser.add_argument("--generation-config", type=Path,
+                        default=PROJECT_ROOT / "configs" / "formula_discovery" / "formula_generation.json",
+                        help="独立的公式库/特征生成配置")
+    parser.add_argument("--output", type=Path, default=None,
+                        help="Joblib 输出路径；默认读取配置中的预计算文件路径")
     args = parser.parse_args()
 
     try:
@@ -63,33 +59,39 @@ def main() -> None:
 
     logging.basicConfig(level="INFO", format="%(asctime)s %(levelname)s %(message)s")
     config, generation_config = _load_generation_config(args.generation_config)
-
     ranking_config = config["ranking"]
     formula_seed = int(config["seed"])
     feature_seed = int(generation_config["feature_seed"])
-    output_value = (args.output or generation_config.get("output", {}).get(
-        "realdata_mat_artifact"))
+
+    output_value = (
+        args.output
+        or generation_config.get("output", {}).get("artifact")
+    )
     if not output_value:
-        raise ValueError("generation config must define output.realdata_mat_artifact")
-    output_path = Path(output_value).expanduser()
+        raise ValueError(
+            "请通过 --output 或 generation config 的 output.artifact 指定输出文件"
+        )
+    output_path = Path(output_value)
     if not output_path.is_absolute():
         output_path = ROOT / output_path
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # This artifact is the one-variable formula/feature library. Its symbolic
-    # input is x1, so generation does not need to load a dataset.
-    feature_count = 1
-    feature_names = ["x1"]
-
+    # This artifact is the two-variable formula/feature library. Its symbolic
+    # inputs are x1 and x2, so generation does not need to load a dataset.
+    feature_count = 2
+    arity = 2
+    feature_names = ["x1", "x2"]
     import random
     rng = random.Random(formula_seed)
     bases = build_base_records(
-        config, feature_count,
+        config, arity=arity,
         include_symbolic_constant_base=bool(
             generation_config["include_symbolic_constant_base"]
         ),
     )
     candidates = build_candidate_records(bases, config, rng)
+    # Store a canonical order in the frozen artifact.  Runtime pipeline seeds
+    # perform the reproducible exploration shuffle after loading it.
     candidates.sort(key=lambda row: (str(row["readable_expression"]), str(row["sympy_expression"])))
     for index, record in enumerate(candidates):
         record["id"] = f"candidate_{index:06d}"
@@ -98,11 +100,11 @@ def main() -> None:
     )
     pool = [*candidates, *combinations]
     payload = {"bases": bases}
+
     logging.info(
-        "一元公式库生成完成：bases=%d，single=%d，combinations=%d，总计=%d",
+        "公式库生成完成：bases=%d，single=%d，combinations=%d，总计=%d",
         len(bases), len(candidates), len(combinations), len(pool),
     )
-
     feature_artifact = build_precomputed_feature_artifact(
         pool, payload, config["ranking"], feature_seed
     )
@@ -149,7 +151,7 @@ def main() -> None:
         }, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    logging.info("一元 Joblib 公式/特征文件：%s", output_path)
+    logging.info("Joblib 公式/特征文件：%s", output_path)
     logging.info("可读公式 JSON 文件：%s", formula_json_path)
     logging.info("特征矩阵形状：%s", tuple(feature_artifact["features"].shape))
 

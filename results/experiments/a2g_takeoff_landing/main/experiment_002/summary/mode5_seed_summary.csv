@@ -1,0 +1,2 @@
+﻿error,output_directory,pareto_front_size,run_completed,seed,status
+Structure ranking requires scikit-learn/joblib; use the project's py39 environment,/home/lwj/ProSEE/src/prosee/symbolic/core/../../../../results/experiments/a2g_takeoff_landing/main/experiment_002/seed_001,0,False,1518,failed

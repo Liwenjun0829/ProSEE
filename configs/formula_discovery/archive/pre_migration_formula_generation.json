@@ -5,8 +5,7 @@
   "include_symbolic_constant_base": true,
   "bases": {
     "arities": "auto",
-    "max_abs_exponent": 1,
-    "allow_binary_reciprocals": true
+    "max_abs_exponent": 1
   },
   "candidates": {
     "max_count": 100000,

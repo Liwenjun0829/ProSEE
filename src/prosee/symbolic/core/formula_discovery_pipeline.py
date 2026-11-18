@@ -747,12 +747,6 @@ def load_config(path: Path, pipeline_mode: int | None = 3) -> dict:
     ranking_config["feature_correlation"] = {"enabled": False}
     if ranking_config.get("ablation_enabled", False) and not ranking_config.get("enabled", False):
         raise ValueError("ranking.ablation_enabled requires ranking.enabled")
-    try:
-        direct_fit_top_k = int(ranking_config.get("direct_fit_top_k", 5))
-    except (TypeError, ValueError) as exc:
-        raise ValueError("ranking.direct_fit_top_k must be a non-negative integer") from exc
-    if direct_fit_top_k < 0:
-        raise ValueError("ranking.direct_fit_top_k must be a non-negative integer")
     if not ranking_config.get("ablation_enabled", False):
         configured_tree_nodes_per_level = ranking_config.get(
             "tree_max_nodes_per_level", None
@@ -811,7 +805,7 @@ def load_precomputed_formula_artifact(
     if not artifact_path.is_file():
         raise FileNotFoundError(
             "Precomputed formula/feature artifact does not exist; run "
-            f"precompute_formula_features.py：{artifact_path}"
+            f"precompute_formula_features_bivariate.py：{artifact_path}"
         )
     try:
         artifact = joblib.load(artifact_path)
@@ -917,7 +911,7 @@ def _combine_mode2_dataset_fits(
     predictions = []
     valid_parts = []
     expr = sp.sympify(record["readable_expression"])
-    aggregation = str(cfg.get("joint_r2_aggregation", "minimum"))
+    aggregation = str(cfg.get("_joint_r2_primary", "minimum"))
     for group, (attempts, combined) in zip(dataset_groups, fitted):
         all_attempts.extend(attempts)
         rows = combined.get("dataset_fit_results", [])
@@ -1603,37 +1597,38 @@ def run_iterative_surrogate_mode2(
 
 
 def build_base_records(
-    config: dict, feature_count: int, *, include_symbolic_constant_base: bool = False,
+    config: dict, arity: int, *, include_symbolic_constant_base: bool = False,
 ) -> list[dict]:
+    """Build bases for the fixed arity selected by the calling generator."""
+    arity = int(arity)
+    if arity < 1:
+        raise ValueError("Base arity must be at least 1")
     configured_arities = config["bases"].get("arities")
-    if configured_arities in (None, "auto"):
-        configured_arities = [feature_count]
+    if not isinstance(configured_arities, list) or not configured_arities:
+        raise ValueError("bases.arities must be a non-empty list of explicit integers")
+    configured_arities = {int(value) for value in configured_arities}
+    if arity not in configured_arities:
+        raise ValueError(
+            f"Requested {arity}-ary bases, but bases.arities is "
+            f"{sorted(configured_arities)}"
+        )
     max_abs = int(config["bases"].get("max_abs_exponent", 1))
-    allow_binary_reciprocals = bool(
-        config["bases"].get("allow_binary_reciprocals", True)
-    )
     records = []
-    for arity in configured_arities:
-        arity = int(arity)
-        if arity > feature_count:
-            logging.warning("Skipping %d-ary bases: data has only %d features", arity, feature_count)
-            continue
-        for expr in generate_zero_sum_bases(
-            arity,
-            max_abs,
-            allow_binary_reciprocals=allow_binary_reciprocals,
-        ):
-            records.append(formula_record(
-                expr,
-                id=f"base_{len(records):06d}",
-                structure_type="projected_zero_sum_monomial",
-                source_arity=4,
-                arity=arity,
-                projection_substitutions={f"x{i + 1}": 1 for i in range(arity, 4)},
-                exponents=[int(expr.as_powers_dict().get(sp.Symbol(f"x{i + 1}"), 0))
-                           for i in range(arity)],
-                variables=[f"x{i + 1}" for i in range(arity)],
-            ))
+    for expr in generate_zero_sum_bases(
+        arity,
+        max_abs,
+    ):
+        records.append(formula_record(
+            expr,
+            id=f"base_{len(records):06d}",
+            structure_type="projected_zero_sum_monomial",
+            source_arity=4,
+            arity=arity,
+            projection_substitutions={f"x{i + 1}": 1 for i in range(arity, 4)},
+            exponents=[int(expr.as_powers_dict().get(sp.Symbol(f"x{i + 1}"), 0))
+                       for i in range(arity)],
+            variables=[f"x{i + 1}" for i in range(arity)],
+        ))
     if include_symbolic_constant_base:
         # This is a fitted fitted symbolic constant that acts as an additional
         # base. Its c_ namespace is disjoint from generated c1/c2/... weights;
@@ -1983,7 +1978,7 @@ def compute_metrics(y: np.ndarray, prediction: np.ndarray, valid: np.ndarray) ->
 
 def compute_joint_metrics(y: np.ndarray, prediction: np.ndarray, valid: np.ndarray,
                           dataset_groups: Sequence[dict], aggregation: str) -> dict:
-    """Keep pooled metrics while using a cross-dataset R² as the rank label."""
+    """Compute all cross-dataset R² summaries and retain a legacy primary alias."""
     pooled = compute_metrics(y, prediction, valid)
     per_dataset = []
     for group in dataset_groups:
@@ -1991,19 +1986,23 @@ def compute_joint_metrics(y: np.ndarray, prediction: np.ndarray, valid: np.ndarr
         metrics = compute_metrics(y[start:end], prediction[start:end], valid[start:end])
         per_dataset.append({"name": group["name"], "path": group.get("path"), **metrics})
     finite_r2 = [float(row["r2"]) for row in per_dataset if row["r2"] is not None]
-    if not finite_r2:
-        universal_r2 = None
-    elif aggregation == "minimum":
-        universal_r2 = min(finite_r2)
+    minimum_r2 = min(finite_r2) if finite_r2 else None
+    mean_r2 = float(np.mean(finite_r2)) if finite_r2 else None
+    pooled_r2 = pooled["r2"]
+    if aggregation == "minimum":
+        universal_r2 = minimum_r2
     elif aggregation == "mean":
-        universal_r2 = float(np.mean(finite_r2))
+        universal_r2 = mean_r2
     elif aggregation == "pooled":
-        universal_r2 = pooled["r2"]
+        universal_r2 = pooled_r2
     else:
-        raise ValueError("fitting.joint_r2_aggregation must be minimum, mean, or pooled")
+        raise ValueError("primary joint R² must be minimum, mean, or pooled")
     return _json_value({
-        **pooled, "pooled_r2": pooled["r2"], "r2": universal_r2,
-        "joint_r2": universal_r2, "joint_r2_aggregation": aggregation,
+        **pooled, "pooled_r2": pooled_r2, "r2": universal_r2,
+        "joint_r2": universal_r2,
+        "joint_r2_minimum": minimum_r2,
+        "joint_r2_mean": mean_r2,
+        "joint_r2_pooled": pooled_r2,
         "dataset_metrics": per_dataset,
     })
 
@@ -2370,7 +2369,7 @@ def fit_with_restarts(
         {"name": "dataset_1", "start": 0, "end": len(y)},
     ))
     aggregation = str(cfg.get(
-        "joint_r2_aggregation", "minimum" if len(dataset_groups) > 1 else "pooled"
+        "_joint_r2_primary", "minimum" if len(dataset_groups) > 1 else "pooled"
     ))
     sample_weights = _joint_residual_weights(y, dataset_groups, cfg)
     def residual(params):
@@ -2664,7 +2663,8 @@ def fit_with_restarts(
             "parameter_names": [str(item) for item in evaluator.params],
             "mse": None, "rmse": None, "r2": None, "loss": None,
             "optimization_loss": None, "pooled_r2": None, "joint_r2": None,
-            "joint_r2_aggregation": aggregation, "dataset_metrics": [],
+            "joint_r2_minimum": None, "joint_r2_mean": None,
+            "joint_r2_pooled": None, "dataset_metrics": [],
             "all_datasets_valid": False,
             "valid_samples": 0, "initialization_index": None, "converged": False,
             "optimizer_success": False, "successful_initializations": 0,
@@ -2843,7 +2843,7 @@ def fit_formula_per_dataset(
     all_attempts, dataset_best = [], []
     predictions, valid_parts = [], []
     expr = sp.sympify(record["readable_expression"])
-    aggregation = str(cfg.get("joint_r2_aggregation", "minimum"))
+    aggregation = str(cfg.get("_joint_r2_primary", "minimum"))
     active_rng = fit_rng if fit_rng is not None else rng
     for group in dataset_groups:
         start, end = int(group["start"]), int(group["end"])
@@ -3435,69 +3435,22 @@ def _select_tree_top_k_for_refit(
     ranking: Sequence[dict], top_k: int,
     ranking_config: dict | None = None,
 ) -> list[dict]:
-    """Select a fixed hybrid Top-K: best direct fits plus unseen tree ranks."""
+    """Select refit candidates by predicted rank, with optional ablation strata."""
     if top_k <= 0:
         return []
     rows = list(ranking)
     target_count = min(top_k, len(rows))
     ranking_config = ranking_config or {}
     if (ranking_config.get("ablation_enabled", False)
-            and not ranking_config.get("ablation_use_operator_stratified", False)):
-        return [
-            dict(row) for row in sorted(
-                rows, key=lambda row: row.get("predicted_rank", 10 ** 9)
-            )[:target_count]
-        ]
-    if (ranking_config.get("ablation_enabled", False)
             and ranking_config.get("ablation_use_operator_stratified", False)):
         return _select_symbol_operator_stratified(
             rows, target_count, ranking_config,
         )
-
-    direct_limit = int(ranking_config.get("direct_fit_top_k", 5))
-    if direct_limit < 0:
-        raise ValueError("ranking.direct_fit_top_k cannot be negative")
-    training_rows = [
-        row for row in rows if bool(row.get("is_training_formula", False))
-    ]
-    training_rows.sort(
-        key=lambda row: (
-            -(float(row["actual_fit_r2"])
-              if row.get("actual_fit_r2") is not None else -math.inf),
-            row.get("formula_id", ""),
-        )
-    )
-    direct_rows = [dict(row) for row in training_rows[:direct_limit]]
-    for row in direct_rows:
-        row["selection_source"] = "actual_fit_r2"
-    direct_ids = {row.get("formula_id") for row in direct_rows}
-    unseen_rows = [
-        row for row in rows
-        if not bool(row.get("is_training_formula", False))
-        and row.get("formula_id") not in direct_ids
-    ]
-    remaining = max(0, target_count - len(direct_rows))
-    tree_rows = [
+    return [
         dict(row) for row in sorted(
-            unseen_rows, key=lambda row: row.get("predicted_rank", 10 ** 9)
-        )[:remaining]
-    ] if remaining else []
-    for row in tree_rows:
-        row["selection_source"] = "tree_model_unseen"
-    selected = direct_rows + tree_rows
-    if len(selected) < target_count:
-        if ranking_config.get("_allow_reduced_top_k", False):
-            logging.warning(
-                "Mixed Top-K reduced because too few formulas are outside the training set: target=%d, actual=%d",
-                target_count, len(selected),
-            )
-            return selected
-        raise ValueError(
-            "Too few formulas outside the training set for mixed Top-K: "
-            f"selected={len(selected)}, target={target_count}; "
-            "add candidate formulas not used for direct fitting or lower ranking.refit_top_k."
-        )
-    return selected
+            rows, key=lambda row: row.get("predicted_rank", 10 ** 9)
+        )[:target_count]
+    ]
 
 
 def refit_top_ranked_formulas(
@@ -4383,6 +4336,9 @@ def save_outputs(output_dir: Path, payload: dict) -> None:
                     "r2_std": row.get("r2_std"),
                     "min_r2": row.get("min_r2"),
                     "pooled_r2": row.get("pooled_r2"),
+                    "joint_r2_minimum": row.get("joint_r2_minimum"),
+                    "joint_r2_mean": row.get("joint_r2_mean"),
+                    "joint_r2_pooled": row.get("joint_r2_pooled"),
                     "segment_prediction_difference": row.get(
                         "segment_prediction_difference"
                     ),
@@ -4516,6 +4472,9 @@ def save_outputs(output_dir: Path, payload: dict) -> None:
                 "r2_std": row.get("r2_std"),
                 "min_r2": row.get("min_r2"),
                 "pooled_r2": row.get("pooled_r2"),
+                "joint_r2_minimum": row.get("joint_r2_minimum"),
+                "joint_r2_mean": row.get("joint_r2_mean"),
+                "joint_r2_pooled": row.get("joint_r2_pooled"),
                 "segment_prediction_difference": row.get(
                     "segment_prediction_difference"
                 ),
@@ -4964,7 +4923,7 @@ def _evaluate_validation_row(row: dict, X: np.ndarray, y: np.ndarray,
                 valid[start:end] = part_valid
         metrics = compute_joint_metrics(
             y, prediction, valid, validation_groups,
-            fitting_config.get("joint_r2_aggregation", "minimum"),
+            fitting_config.get("_joint_r2_primary", "minimum"),
         )
         r2_values = [float(item["r2"]) for item in metrics["dataset_metrics"]
                      if item.get("r2") is not None and math.isfinite(float(item["r2"]))]
@@ -9140,7 +9099,7 @@ def _run_mode5_shared_structure_seed(
     # fit_formula_per_dataset is the shared-structure multi-dataset path:
     # both segments use the same expression, while parameters are stored per
     # segment.  pooled R² is the primary real-data quality objective.
-    fitting["joint_r2_aggregation"] = "pooled"
+    fitting["_joint_r2_primary"] = "pooled"
     # Use the fitted prediction jump as the continuity objective.
     child_config["mode5_shared_structure_run"] = True
     child_config_path = seed_directory / "seed_config.json"
@@ -9154,7 +9113,6 @@ def _run_mode5_shared_structure_seed(
         pipeline_mode=3, _allow_single_mode4=True, validation_enabled=True,
     )
     payload.setdefault("metadata", {})["mode5_method"] = "shared_structure_different_parameters"
-    payload["metadata"]["joint_r2_aggregation"] = "pooled"
     payload["metadata"]["continuity_objective"] = "predicted_segment_difference"
     payload["metadata"]["continuity_metric_definition"] = (
         "abs(prediction_right_formula_at_breakpoint - "
@@ -10364,7 +10322,7 @@ def run(
         raise FileNotFoundError(
             "This pipeline no longer generates formulas/features at runtime; set "
             "output.artifact in formula_generation.json and first run "
-            "precompute_formula_features.py."
+            "precompute_formula_features_bivariate.py."
         )
     ranking_config["precomputed_feature_artifact"] = (
         precomputed_formula_artifact
@@ -10758,7 +10716,6 @@ def run(
                         "valid_samples": item.get("valid_samples"),
                     } for item in segment_rows],
                     joint_r2=best.get("r2"),
-                    joint_r2_aggregation="piecewise_segments",
                     constants_shared_across_datasets=False,
                 )
             else:
@@ -10773,7 +10730,7 @@ def run(
                                       "r2": best.get("r2"), "mse": best.get("mse"),
                                       "rmse": best.get("rmse"), "loss": best.get("loss"),
                                       "valid_samples": best.get("valid_samples")}],
-                    joint_r2=best.get("r2"), joint_r2_aggregation="single_dataset",
+                    joint_r2=best.get("r2"),
                     constants_shared_across_datasets=False,
                 )
             payload["single_initializations"].extend(attempts)

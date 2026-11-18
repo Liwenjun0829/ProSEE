@@ -1,0 +1,14 @@
+{
+  "evaluation": "validation",
+  "objective_order": [
+    "validation_mean_r2",
+    "validation_r2_std",
+    "complexity"
+  ],
+  "directions": {},
+  "empirical_bounds": {},
+  "raw_reference": {},
+  "normalized_reference": {},
+  "zero_span_objectives": [],
+  "normalization_scope": "mode4_experiment_all_iterations_all_seeds_tree_and_random_methods"
+}

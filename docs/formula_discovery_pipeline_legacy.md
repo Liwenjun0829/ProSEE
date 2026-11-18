@@ -7,9 +7,8 @@
 
 - 默认按每个输入数据源随机划分训练集、验证集和测试集，比例为 `50% / 25% / 25%`。训练集用于 LM 拟合；若提供独立 PySR 配置，训练集用于 PySR 搜索，验证集用于树模型与 PySR 的选解及验证集 HV，测试集只用于冻结公式的最终报告、测试集 HV 和气泡图。可通过 `data.split.train_fraction`、`validation_fraction` 和 `test_fraction` 修改比例。
 
-- `bases.arities`、`max_abs_exponent` 控制基元元数和指数范围；
-  `bases.allow_binary_reciprocals` 控制是否生成二元纯倒数基元 `1/x1`、`1/x2`，默认
-  为 `true`；设为 `false` 时仍保留 `x1/x2`、`x2/x1` 等比值；
+- `bases.arities` 显式列出允许生成的基元元数；一元、二元预计算脚本分别使用 `1`、`2`；`max_abs_exponent` 控制指数范围；
+  二元基元始终包含纯倒数项 `1/x1`、`1/x2`，以及 `x1/x2`、`x2/x1` 等比值；
 - `candidates.max_count`、`two_base_ratio` 控制单项候选规模及双基元比例；
 - `combinations.max_count`、`types` 控制加法/乘法组合及抽样上限；
   `combinations.max_terms` 控制每个组合最多包含多少个候选公式，默认 `2`，设置为 `3`、`4` 等即可生成多项组合；
@@ -32,7 +31,7 @@
   `log_merge_lm_initializations` 单独控制 Log 合并检查的 LM 重启次数；
   上游初步拟合使用固定的 `single_sample_count`/`combination_sample_count` 和原有拟合顺序。
 - `ranking.model_type` 可选 `extra_trees` 或 `xgboost`。
-- Top-K 固定采用混合规则：最多由 `ranking.direct_fit_top_k` 个直接 LM 拟合公式按实际拟合 R²排序选出（不使用树模型排序），其余名额只从未参与直接拟合的公式中按树模型排名补足。当前配置为最多 5 个；这保证剩余公式不来自训练集。
+- 标准 Top-K 复拟合分支按排序模型预测排名选取公式；LM 直接拟合结果不再占用优先名额。当前 `run_*.py` 的 Mode 3/5 代理搜索不执行该复拟合分支。
 - 主实验入口固定使用 `operator_primitive_matrix`；特征编码参数由公式/特征预计算配置管理。
   设置为 `tree_coordinates` 后，所有模型（包括树模型）统一使用与岭回归相同的树坐标特征；特征相关性诊断当前统一关闭。
   设置为 `tree_coordinates_prime_experimental`（别名 `tree_coordinates_prime`）可启用实验性素数编码：节点
@@ -194,7 +193,6 @@ cd /home/lwj/另一种NN模型
 python src/prosee/symbolic/core/generate_zero_sum_bases.py --max-variables 4 --max-abs 2 --output-directory artifacts/bases
 ```
 
-临时禁止二元纯倒数基元时追加 `--disable-binary-reciprocals`。
 
 输出目录包含完整 `formula_discovery_results.json`，以及基元、单项候选、双项组合、
 单项全部初始化、单项最佳局部结果、双项最佳全局结果及结构排序 CSV。JSON 和 CSV 均保留

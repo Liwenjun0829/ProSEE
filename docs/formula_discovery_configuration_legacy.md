@@ -113,9 +113,8 @@ Maritime 使用历史模式标识 `data.mode=realdata_mat`，但数据由 `data.
 
 | 参数 | 当前值 | 作用 |
 | --- | --- | --- |
-| `bases.arities` | `auto` | 无量纲基元的元数；`auto` 使用当前数据特征数。 |
+| `bases.arities` | `[1, 2]` | 显式允许生成的基元元数；一元、二元脚本分别使用 `1`、`2`，不得使用 `auto`。 |
 | `bases.max_abs_exponent` | `1` | 基元中各变量指数绝对值上限。 |
-| `bases.allow_binary_reciprocals` | `true` | 是否生成 `1/x1`、`1/x2` 等二元纯倒数基元。 |
 | `candidates.max_count` | `100000` | 单项候选公式最多保留的数量。 |
 | `candidates.two_base_ratio` | `0.5` | 候选中双基元结构的目标占比。 |
 | `candidates.wrappers` | `identity, log_abs, sin, cos, log_abs_sin, log_abs_cos` | 作用于基元的算子类型。 |
@@ -144,8 +143,9 @@ Maritime 使用历史模式标识 `data.mode=realdata_mat`，但数据由 `data.
 | `complex_tolerance` | `1e-12` | 判断复数结果虚部可忽略的容差。 |
 | `max_abs_value` | `1e150` | 预测或中间数值绝对值上限，超过视为异常。 |
 | `share_constants_across_datasets` | `false` | 旧版跨数据集共享常数选项；当前主流程未读取此键。 |
-| `joint_r2_aggregation` | `minimum` | 多数据集联合评价时汇总 R² 的方法。 |
 | `invalid_residual_penalty` | `1000000` | 无效预测在拟合残差中使用的惩罚值。 |
+
+结果中会分别保存 `joint_r2_minimum`、`joint_r2_mean` 和 `joint_r2_pooled`；旧的 `r2` / `joint_r2` 字段继续按既有流程规则提供主指标。
 
 ## 结构排序 `ranking`
 
@@ -157,14 +157,12 @@ Maritime 使用历史模式标识 `data.mode=realdata_mat`，但数据由 `data.
 | `ablation_enabled` | `false` | 启用排序模块内部的消融分支；与顶层 Mode 3 自动消融开关不同。 |
 | `model_type` | `extra_trees` | 排序回归模型；支持 `extra_trees`、`xgboost` 等实现分支。 |
 | `minimum_training_samples` | `20` | 训练排序模型要求的最少已拟合样本数。 |
-| `direct_fit_top_k` | `5` | 混合 Top-K 中直接拟合公式的最多名额。 |
 | `validation_fraction` | `0.2` | 排序模型训练数据内部的验证比例。 |
 | `validation_top_k` | `10` | 计算验证集 Top-K 排序指标时的 K。 |
 | `feature_correlation.enabled` | `false` | 候选公式特征相关性诊断开关；主流程加载配置时也会强制关闭。 |
 | `feature_correlation.sample_size` | `300` | 相关性诊断抽取的候选公式数；诊断关闭时不生效。 |
 | `refit_top_k` | `15` | 排名后选出进行精确重拟合的公式数。 |
 | `refit_lm_initializations` | `20` | Top-K 精确重拟合的 LM 初值次数。 |
-| `r2_floor` | `-2` | 排序训练标签中 R² 的裁剪下限。 |
 | `n_estimators` | `500` | ExtraTrees 等集成模型中的树数量。 |
 | `max_depth` | `null` | 排序树最大深度；`null` 表示不额外限制。 |
 | `min_samples_leaf` | `2` | 排序树叶节点最少样本数。 |
@@ -183,6 +181,6 @@ Maritime 使用历史模式标识 `data.mode=realdata_mat`，但数据由 `data.
 | `precomputed_formula_feature_artifact` | `precomputed_formula_features.joblib` | CSV 模式使用的预计算公式与特征文件。 |
 | `precomputed_formula_feature_artifact_realdata_mat` | `precomputed_formula_features_realdata_mat.joblib` | Maritime `measured_pathloss` profile 使用的冻结公式/特征文件；旧字段名为兼容而保留。 |
 
-预计算文件由 `precompute_formula_features.py` 及独立的 `formula_generation.json` 管理。若更改基元、候选或组合生成参数，应重新生成匹配的预计算文件；主流程会检查其配置指纹。
+二元与一元预计算文件分别由 `precompute_formula_features_bivariate.py` 和 `precompute_formula_features_univariate.py` 生成，并由独立的 `formula_generation.json` 管理。若更改基元、候选或组合生成参数，应重新生成匹配的预计算文件；主流程会检查其配置指纹。
 
 
